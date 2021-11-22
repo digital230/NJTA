@@ -1,0 +1,183 @@
+<body class="center-menu">
+  <% include ../partials/navbar %>
+
+  <!-- ============================================================== -->
+  <!-- Start Page Content here -->
+  <!-- ============================================================== -->
+  <div class="wrapper" style="padding-top: 65px;">
+    <div class="container">
+      <!-- start page title -->
+      <div class="d-flex flex-row justify-content-between">
+        <div class="page-title-box">
+          <h4 class="page-title">
+            <a class="blacklink" href="/dashboard"><i class="fa fa-arrow-left"></i>Return Home</a>
+          </h4>
+        </div>
+        <div class="page-title-box">
+          <h4 class="page-title">ADA Plan</h4>
+        </div>
+        <div class="page-title-box mt-auto mb-auto">
+          <!-- <h4 class="page-title">Save Draft</h4> -->
+          <h4 class="page-title">
+            <!-- <% if(submission.length > 0) { %>
+
+            <a class="mr-2" style="cursor: pointer;" onclick="sendEmail('/share/email?plan=<%= submission[0].subplan %>')">Share
+              Email</a>
+            <% } %> -->
+          </h4>
+        </div>
+      </div>
+      <!-- end page title -->
+
+      <div class="row">
+        <div class="col-3 col-md-3 col-lg-3">
+          <div class="card">
+            <div class="card-body">
+              <div class="d-flex flex-column">
+                <% for(let i=0; i<sections.length; i++) { %>
+                <div class="item d-flex flex-column">
+                  <h4><strong>
+                      <%= sections[i].title %>
+                    </strong></h4>
+                  <% if(sections[i].completed) { %>
+                  <p class="text-success" style="font-size: .7em;">
+                    <span>Completed</span><i class="ml-2 fa fa-check text-success"></i>
+                  </p>
+                  <% } else { %>
+                  <p class="text-secondary" style="font-size: .7em;"><span>Not
+                      Completed</span></p>
+                  <% } %>
+
+                </div>
+                <% } %>
+                <h3>Final Review</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-9 col-md-9 col-lg-9">
+
+          <!-- <div class="row"> -->
+          <% for (let i=0; i<submissions.length; i++) { %>
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="col-12">
+
+                <h3>
+                  <%= submissions[i].section.title %>
+                </h3>
+                <% for (let j=0; j<submissions[i].questionair.length; j++) { %>
+                <div class="form-group">
+                  <h4><span class="mr-2"> Q<%= j + 1 %></span>
+                    <%= submissions[i].questionair[j].question.question %>
+                  </h4>
+
+                  <div class="d-flex flex-column">
+                    <ul>
+                      <% for(let k=0; k<submissions[i].questionair[j].ans.length; k++) {
+                                                        %>
+                      <li>
+                        <p style="margin-bottom: 0;">
+                          <% if(submissions[i].questionair[j].ans[k].indexOf("cultural-access-network.s3.amazonaws.com")
+                                                                !=-1) { %>
+                          <a href="<%=  submissions[i].questionair[j].ans[k] %>">
+                            <i class="fa fa-file"></i>Attached File </a>
+                          <% } else { %>
+                          <%=  submissions[i].questionair[j].ans[k] %>
+                          <% } %>
+
+                        </p>
+                      </li>
+                      <% } %>
+                    </ul>
+                  </div>
+                </div>
+                <% } %>
+              </div>
+            </div> <!-- end card-body -->
+          </div>
+          <% } %>
+
+
+        </div>
+      </div>
+    </div> <!-- end col -->
+
+  </div> <!-- end container fluid-->
+  </div><!-- end wrapper-->
+
+  <!-- Vendor js -->
+  <script src="/js/vendor.min.js"></script>
+  <!-- Sweet Alerts js -->
+  <script src="/libs/sweetalert2/sweetalert2.min.js"></script>
+  <!-- Sweet alert init js-->
+  <script src="assets/js/pages/sweet-alerts.init.js"></script>
+
+  <!-- App js-->
+  <script src="/js/app.min.js"></script>
+
+  <!-- Plugins js-->
+
+  <script src="/libs/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+  <script src="/libs/parsleyjs/parsley.min.js"></script>
+
+
+  <!-- Init js-->
+  <script src="/js/pages/form-wizard.init.js"></script>
+  <script src="/js/pages/form-validation.init.js"></script>
+
+
+  <!-- Scripts Used by All Pages-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+  <!-- File Pond & Plugins-->
+  <!-- <script defer src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.js"></script> -->
+  <!-- <script defer src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script> -->
+  <!-- <script defer src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script> -->
+  <script defer src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"></script>
+  <!-- <script defer src="/js/filepond-media-preview.js"></script> -->
+  <!-- <script defer src="https://unpkg.com/filepond/dist/filepond.js"></script> -->
+  <!-- <script defer src="/js/fileUpload.js"></script> -->
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.579.0.min.js"></script>
+
+  <!-- Alert Function -->
+  <script type="text/javascript">
+    function sendEmail(link = '/share/email?plan=<%= submission[0].subplan %>') {
+      fetch(link).then(res => res.json()).then(data => {
+          alert(data.message);
+        })
+        .catch(err => alert(err.message));
+    }
+
+    $('#btn-submit').on('click', function(e) {
+      e.preventDefault();
+      var form = $(this).parents('form');
+      Swal.fire({
+        title: 'Are you sure you want to submit?',
+        type: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, submit my film!'
+      }).then((result) => {
+        if (result.value) {
+          Swal.fire(
+            'Submitted!',
+            'Your film has been submitted!',
+            'success'
+          )
+          form.submit();
+        }
+      })
+    });
+  </script>
+
+  <!-- Date Input-->
+
+</body>
+
+</html>

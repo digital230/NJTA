@@ -1,0 +1,36 @@
+<label for="">
+  <input onchange="onInputBlur(this)" data-type="1" data-no="1" value="<%= getTheAnswer(selectedSection.questions[j].ans, 1) %>" data-question-id="<%= selectedSection.questions[j]._id %>" name="<%= selectedSection.questions[j]._id %>" class="form-control mb-3">
+
+  <% let subquestions = selectedSection.questions[j].subQuestions %>
+
+  <% for(let n=0; n<subquestions.length; n++) { %>
+  <% if(subquestions[n].qtype == 'text') {%>
+  <div class="row">
+    <div class="col-md-2 mb-2">
+      <p><%= subquestions[n].question %></p>
+    </div>
+    <div class="col-md-5 mb-2">
+      <input type="text" value="<%= getTheAnswer(selectedSection.questions[j].ans, subquestions[n].no) %>" onblur="onNestedCheckChange(this)" class="form-control mb-2" data-text="<%= subquestions[n].question %>" name="<%= selectedSection.questions[j]._id %>" data-question-id="<%= selectedSection.questions[j]._id %>" data-type="1" data-no="<%= subquestions[n].no %>">
+    </div>
+  </div>
+  <% } %>
+  <% if(subquestions[n].qtype == 'multi-text') {%>
+  <div class="form-group">
+    <label for=""><%= subquestions[n].question %></label>
+    <textarea onblur="onInputBlur(this)" class="form-control mb-2" data-text="<%= subquestions[n].question %>" name="<%= selectedSection.questions[j]._id %>" data-question-id="<%= selectedSection.questions[j]._id %>" data-type="1" data-no="<%= subquestions[n].no %>"><%= getTheAnswer(selectedSection.questions[j].ans, subquestions[n].no) %></textarea>
+    <% } %>
+    <% } %>
+  </div>
+
+  <span>
+    <% for(let k = 0; k<selectedSection.questions[j].ans.length; k++) { %>
+    <% if(isSecondary(selectedSection.questions[j].ans[k])) { %>
+    <div class="form-group">
+      <input class="form-control w-3" onblur="onInputBlur(this)" value="<%= selectedSection.questions[j].ans[k].value %>" data-question-id="<%= selectedSection.questions[j]._id %>" data-type="2" data-no="2" type="text" id="<%= selectedSection.questions[j]._id %>" name="<%= selectedSection.questions[j]._id  %>">
+    </div>
+    <% } %>
+    <% } %>
+  </span>
+
+
+</label>

@@ -1,0 +1,45 @@
+<label for="">
+
+  <div class="row" name="radio-<%= selectedSection.questions[j]._id %>">
+    <div class="col-md-8" id="<%= selectedSection.questions[j]._id %>">
+      <label><input value="yes" <%=isSelected(selectedSection.questions[j].ans, 'yes' , 1) ? 'checked' : '' %>
+        onchange="onInputBlur(this)" data-type="1" data-no="<%= 1 %>" data-question-id="<%=
+            selectedSection.questions[j]._id %>"
+            name="<%= selectedSection.questions[j]._id %>-" type="radio">
+              Yes</label>
+      <label><input value="no" <%=isSelected(selectedSection.questions[j].ans, 'no' , 1) ? 'checked' : '' %>
+        onchange="onInputBlur(this)" data-type="1" data-no="<%= 1 %>" data-question-id="<%=
+            selectedSection.questions[j]._id %>" name="<%= selectedSection.questions[j]._id %>-" type="radio">
+              No</label>
+    </div>
+  </div>
+
+  <% let subquestions=selectedSection.questions[j].subQuestions %>
+
+    <% for(let n=0; n<subquestions.length; n++) { %>
+      <% if(subquestions[n].qtype=='multi-text' ) {%>
+        <h4>
+          <%= subquestions[n].question %>
+        </h4>
+        <div class="form-group">
+          <textarea onblur="onInputBlur(this)" class="form-control mb-2" data-text="<%= subquestions[n].question %>"
+            name="<%= selectedSection.questions[j]._id %>" data-question-id="<%= selectedSection.questions[j]._id %>"
+            data-type="1"
+            data-no="<%= subquestions[n].no %>"><%= getTheAnswer(selectedSection.questions[j].ans, subquestions[n].no) %></textarea>
+        </div>
+        <% } %>
+          <% } %>
+
+            <span>
+              <% for(let k=0; k<selectedSection.questions[j].ans.length; k++) { %>
+                <% if(isSecondary(selectedSection.questions[j].ans[k])) { %>
+                  <div class="form-group">
+                    <input class="form-control w-3" onblur="onInputBlur(this)"
+                      value="<%= selectedSection.questions[j].ans[k].value %>"
+                      data-question-id="<%= selectedSection.questions[j]._id %>" data-type="2" data-no="2" type="text"
+                      id="<%= selectedSection.questions[j]._id %>" name="<%= selectedSection.questions[j]._id  %>">
+                  </div>
+                  <% } %>
+                    <% } %>
+            </span>
+</label>

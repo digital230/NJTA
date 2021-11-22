@@ -1,0 +1,806 @@
+<body class="center-menu new-ui">
+<% include ../partials/navbar %>
+
+<!-- ============================================================== -->
+<!-- Start Page Content here -->
+<!-- ============================================================== -->
+<div class="wrapper" style="padding-top: 65px;">
+
+<div class="container-fluid">
+	<!-- start page title -->
+	<div class="d-flex flex-row justify-content-between">
+
+		<div class="page-title-box">
+			<h4 class="page-title"><a class="blacklink" href="/dashboard"><i class="fa fa-arrow-left"></i>Return
+					Home</a></h4>
+		</div>
+		<div class="page-title-box">
+			<h4 class="page-title">FY 2022-2024</h4>
+		</div>
+		<div class="page-title-box">
+		</div>
+	</div>
+	<!-- end page title -->
+
+	<div class="d-block d-lg-none">
+		<button class="btn btn-custom-color" type="button" data-toggle="collapse" data-target="#sections"
+			aria-expanded="true" aria-controls="sections">
+			SECTIONS
+		</button>
+	</div>
+
+	<% function getTheAnswer(answers, no=1) { if(answers.length==0) { return "" ; } let ans=answers.filter(_ans=>
+		_ans.no == no);
+		return ans.length > 0 ? ans[0].value : '';
+		} %>
+
+		<% testFunction=function() { return "Shah Khalid." ; } %>
+			<% isSelected=function(answers, value, no) { if(answers.length==0) { return false; } let
+				ans=answers.filter(_ans=> _ans.no == no);
+				return ans.length > 0 ? ans[0].value == value : false;
+				}
+				%>
+				<% isCheckboxSelected=function(answers, value, no) { if(answers.length==0) { return false; } let
+					ans=answers.filter(_ans=> _ans.no == no && _ans.value == value);
+					return ans.length > 0 ? ans[0].value == value : false;
+					}
+					%>
+					<% getFileUrl=function(answers, no) { let ans=answers.filter(_ans=>
+						_ans.value.includes("cultural-access-network.s3.amazonaws"));
+						if(ans.length > 0) {
+						return ans[0].value;
+						}
+						return "";
+						}
+						%>
+
+						<% isSecondary=function(answer) { return answer.type==2; } %>
+
+							<% getSecondary=function(answers=[]) { if(answers.length==0) { return "" ; } let
+								ans=answers.filter(_ans=> _ans.type == 2);
+								return ans.length > 0 ? ans[0].value : "";
+								}
+								%>
+
+								<div class=" row">
+									<div aria-expanded="true" id="sections" class="collapse show col-md-12 col-lg-3">
+										<div class="card card-survey">
+											<div class="card-body">
+												<div class="d-flex flex-column">
+													<% for(let i=0; i<sections.length; i++) { %>
+														<div class="item d-flex flex-column">
+															<% if(sections[i]._id===selectedSection._id) { %>
+																<h4 class="primary text-primary">
+																	<a style="color: inherit;"
+																		href="/take/survey/<%= plan %>?cat=<%= sections[i]._id %>">
+																		<strong>
+																			<%= sections[i].no %> - <%= sections[i].title %>
+																		</strong>
+																	</a>
+																</h4>
+																<% } %>
+																	<% if(sections[i]._id !==selectedSection._id) { %>
+																		<h4>
+																			<a style="color: inherit;"
+																				href="/take/survey/<%= plan %>?cat=<%= sections[i]._id %>"><strong>
+																					<%= sections[i].no %> -
+																						<%= sections[i].title %>
+																				</strong></a>
+																		</h4>
+																		<% } %>
+																			<% if(sections[i].status=='completed' ) { %>
+																				<p class="text-success" style="font-size: .7em;">
+																					<span>Completed</span>
+																				</p>
+																				<% } %>
+																					<% if(sections[i].status !='completed' ) { %>
+																						<p class="text-secondary" style="font-size: .7em;">
+																							<span>Not
+																								Completed</span>
+																						</p>
+																						<% } %>
+														</div>
+														<% } %>
+
+												</div>
+
+											</div>
+										</div>
+									</div>
+									<div class="col-md-12 col-lg-9">
+										<div class="card card-survey">
+											<div class="card-body">
+												<form id="surveyForm" onsubmit="handleSubmit(this)"
+													action="/submission/form/<%= selectedSection._id %>?plan=<%= selectedSection.subplan %>"
+													method="POST">
+													<div class="col-12">
+														<h4 class="selectedSection">
+															<%= selectedSection.title %>
+														</h4>
+														<% for (let i=0; i<1; i++) { %>
+															<% for (let j=0; j<selectedSection.questions.length; j++) { %>
+																<div class="form-group">
+																	<h3> Q<%= selectedSection.questions[j].no %>.</h3>
+																	<% include ../partials/question/question %>
+																		<div id="div<%= j %>" class="d-flex flex-column">
+																			<% if(selectedSection.questions[j].qtype=='multi-text-multi' ) { %>
+																				<% include ../partials/question/multiTextMulti %>
+																					<% } %>
+																						<% if(selectedSection.questions[j].qtype=='multi-obj-text' ) { %>
+																							<% include ../partials/question/multiobjtext %>
+																								<% } %>
+																									<% if(selectedSection.questions[j].qtype=='checkbox' ) { %>
+																										<% include ../partials/question/checkbox %>
+																											<% } %>
+																												<% if(selectedSection.questions[j].qtype=='radio' ) { %>
+																													<% include ../partials/question/radio %>
+																														<% } %>
+																															<% if(selectedSection.questions[j].qtype=='text' ) {
+																																%>
+																																<% include ../partials/question/text %>
+																																	<% } %>
+																																		<% if
+																																			(selectedSection.questions[j].qtype=='new-test'
+																																			) { %>
+																																			<% include ../partials/question/newtest %>
+																																				<% } %>
+																																					<% if(selectedSection.questions[j].qtype=='multi-text'
+																																						) { %>
+																																						<% include
+																																							../partials/question/multitext %>
+																																							<% } %>
+																																								<% if(selectedSection.questions[j].qtype=='checkbox-multi'
+																																									) { %>
+																																									<% include
+																																										../partials/question/checkboxMulti
+																																										%>
+																																										<% } %>
+																																											<% if(selectedSection.questions[j].qtype=='file'
+																																												){ %>
+																																												<% include
+																																													../partials/question/file
+																																													%>
+																																													<% } %>
+																																														<% if(selectedSection.questions[j].qtype=='file-multi'
+																																															){ %>
+																																															<% include
+																																																../partials/question/fileMulti
+																																																%>
+																																																<% } %>
+																																																	<% if(selectedSection.questions[j].qtype=='radio-multi'
+																																																		){ %>
+																																																		<% include
+																																																			../partials/question/radioMulti
+																																																			%>
+																																																			<% } %>
+																																																				<% if(selectedSection.questions[j].qtype=='nested-obj-text-check'
+																																																					){%>
+																																																					<% include
+																																																						../partials/question/nesteObjTextCheck
+																																																						%>
+																																																						<% }
+																																																							%>
+																																																							<% if(status){
+																																																								%>
+																																																								<button
+																																																									data-index="<%= j %>"
+																																																									style="width: 120px;"
+																																																									class="btn btn-primary btn-sm"
+																																																									type='button'
+																																																									onclick="addFieldFunc('div<%= j %>', '<%= selectedSection.questions[j]._id %>', this)">
+																																																									+
+																																																									Add
+																																																									Answer</button>
+																																																								<% }
+																																																									%>
+																																																									<% }
+																																																										%>
+																		</div>
+																		<br>
+																		<br>
+																</div>
+																<% } %>
+													</div>
+
+													<div class="col-12">
+														<div class="form-group d-flex justify-content-between">
+
+															<% if(prevSectionLink) { %>
+																<a href="/take/survey/<%= plan %>?cat=<%= prevSectionLink._id %>"
+																	class="btn btn-custom-color push-left">
+																	Prev</a>
+																<% } else { %>
+																	<button disabled type="button"
+																		class="btn btn-custom-color push-left">Prev</button>
+																	<% } %>
+
+
+																		<% if(nextSection) { %>
+																			<a href="/take/survey/<%= plan %>?cat=<%= nextSection._id %>"
+																				class="btn btn-custom-color push-right">
+																				Next</a>
+																			<% } else { %>
+																				<a id="ok" href="/view/submissions/<%= plan %>/true"
+																					class="btn btn-custom-color push-right">Next</a>
+																				<% } %>
+
+														</div>
+													</div>
+												</form>
+												<!-- </div>                        -->
+											</div> <!-- end card-body -->
+										</div>
+									</div>
+								</div>
+</div> <!-- end col -->
+
+</div> <!-- end container fluid-->
+</div><!-- end wrapper-->
+
+<!-- Vendor js -->
+<script src="/js/vendor.min.js"></script>
+
+<!-- knob plugin -->
+<script src="/libs/jquery-knob/jquery.knob.min.js"></script>
+
+<!-- Sweet Alerts js -->
+<script src="/libs/sweetalert2/sweetalert2.min.js"></script>
+
+<!-- Sweet alert init js-->
+<script src="/js/pages/sweet-alerts.init.js"></script>
+
+<!-- Dashboard init js-->
+<script src="/js/pages/dashboard.init.js"></script>
+
+<!-- Chart JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+
+<!-- App js-->
+<script src="/js/app.min.js"></script>
+
+<!-- Delete Alert -->
+<script type="text/javascript">
+$('#btn-delete').on('click', function (e) {
+	e.preventDefault();
+	var form = $(this).parents('form');
+	Swal.fire({
+		title: 'Are you sure you want to delete?',
+		type: 'question',
+		showCancelButton: true,
+		confirmButtonColor: '#3085d6',
+		cancelButtonColor: '#d33',
+		confirmButtonText: 'Are you sure you want to delete?'
+	}).then((result) => {
+		if (result.value) {
+			Swal.fire(
+				'Submitted!',
+				'Your submission has been deleted!',
+				'success'
+			)
+		}
+	})
+});
+</script>
+
+<!-- Scripts Used by All Pages-->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- Sweet alert init js-->
+<script src="/js/pages/sweet-alerts.init.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+crossorigin="anonymous"></script>
+<script>
+function addFieldFunc(id, name, button) {
+	let div = document.getElementById('div' + button.dataset.index);
+	let elem = createText(name);
+	// elem.addEventListener('onblur', onInputBlur(this, 'text', name));
+	div.insertBefore(elem, button);
+	// elem.children[0].addEventListener("onblur", onInputBlur);/
+	// elem.children[0].addEventListener("onchange", alert("hello"));
+}
+function handleSubmit(form) {
+}
+function onInputBlur(input, id, question) {
+	question = input.dataset.questionId
+	var values = [];
+	let _nodes = [];
+	if (document.getElementsByName('radio-' + question)) {
+		let docs = document.getElementsByName('radio-' + question);
+		docs.forEach(itm => {
+			_nodes.push(...itm.querySelectorAll("input"));
+		});
+	}
+	let nodes = document.getElementsByName(question);
+	nodes = [...nodes];
+	console.log('nodes: ', nodes);
+	let type = input.dataset.type;
+	nodes.forEach(node => {
+		switch (node.type) {
+			case 'textarea': {
+				values.push({
+					value: node.value.trim(),
+					type: node.dataset.type ? node.dataset.type : 1,
+					no: node.dataset.no ? node.dataset.no : 1,
+					text: node.dataset.text ? node.dataset.text : undefined
+				});
+				break;
+			}
+			case 'text': {
+				values.push({
+					value: node.value.trim(),
+					type: node.dataset.type ? node.dataset.type : 1,
+					no: node.dataset.no ? node.dataset.no : 1,
+					text: node.dataset.text ? node.dataset.text : undefined
+				});
+				break;
+			}
+			case 'radio': {
+				values.push({
+					value: node.value.trim(),
+					type: node.dataset.type ? node.dataset.type : 1,
+					no: node.dataset.no ? node.dataset.no : 1,
+					text: node.dataset.text ? node.dataset.text : undefined,
+					checked: node.checked
+				});
+				break;
+			}
+			case 'checkbox': {
+				if (node.checked) {
+					values.push({
+						value: node.value.trim(),
+						type: node.dataset.type ? node.dataset.type : 1,
+						no: node.dataset.no ? node.dataset.no : 1,
+						text: node.dataset.text ? node.dataset.text : undefined
+					});
+				}
+				break;
+			}
+			default:
+				break;
+		}
+	});
+	console.log(_nodes);
+	if (_nodes.length) {
+		let node = _nodes.find(n => n.checked == true);
+		console.log('node: ', node);
+		if (node) {
+			values.push({
+				value: node.value.trim(),
+				type: node.dataset.type ? node.dataset.type : 1,
+				no: node.dataset.no ? node.dataset.no : 1,
+				text: node.dataset.text ? node.dataset.text : undefined,
+				checked: node.checked
+			})
+		} else {
+			values.push({
+				value: '',
+				type: _nodes[0].dataset.type ? _nodes[0].dataset.type : 1,
+				no: _nodes[0].dataset.no ? _nodes[0].dataset.no : 1,
+				text: _nodes[0].dataset.text ? _nodes[0].dataset.text : undefined,
+				checked: _nodes[0].checked
+			})
+		}
+	}
+	if (values.every(v => v.hasOwnProperty('checked'))) {
+		// in case if there are only 2 radios
+		let checked = values.find(v => v.checked == true);
+		values = checked ? [checked] : values;
+	}
+	fetch("/submit/question/draft", {
+		method: "POST",
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify({
+			ans: values,
+			question: question,
+			plan: '<%= plan %>',
+			section: '<%= selectedSection._id %>',
+			allSectionsLength: '<%= sections.length %>'
+		})
+	}).then((res) => res.json())
+		.then((data) => {
+		})
+		.catch(Err => console.log(Err))
+}
+function shareEmail() {
+	fetch("/user/share/email/<%= plan %>")
+		.then((res) => {
+			alert("Shared As Email.");
+		})
+		.catch(err => alert("some thing went wrong please try again."))
+}
+function nestedObjectChange(input) {
+	let inputName = input.dataset.questionId;
+	let nodes = document.getElementsByName(inputName);
+	let _nodes = [];
+	if (document.getElementById(inputName)) {
+		_nodes = document.getElementById(inputName).querySelectorAll("input");
+	}
+	nodes = [...nodes, ..._nodes]
+	let ans = [];
+	nodes.forEach(node => {
+		let value;
+		if (node.type == 'radio' && node.checked || node.type != 'radio') {
+			value = node.value;
+			let text = node.dataset.text;
+			let no = node.dataset.no;
+			node
+			ans.push({
+				value,
+				text,
+				no,
+				type: 1
+			})
+		}
+	})
+	let question = input.dataset.questionId;
+	fetch("/submit/question/draft", {
+		method: "POST",
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify({
+			ans: ans,
+			question: question,
+			plan: '<%= plan %>',
+			section: '<%= selectedSection._id %>',
+			allSectionsLength: '<%= sections.length %>'
+		})
+	}).then((res) => res.json())
+		.then((data) => {
+			console.log(data);
+		})
+		.catch(Err => console.log(Err))
+}
+function onNestedCheckChange(input) {
+	let inputName = input.dataset.questionId;
+	let nodes = document.getElementsByName(inputName);
+	// let _nodes = document.getElementById(inputName).querySelectorAll("input");
+	// nodes = [...nodes, ..._nodes]
+	let ans = [];
+	nodes.forEach(node => {
+		let value;
+		let text = node.dataset.text;
+		let no = node.dataset.no;
+		node
+		if (node.type == 'checkbox' && node.checked || node.type != 'checkbox') {
+			value = node.value;
+			ans.push({
+				value: value.trim(),
+				text,
+				no,
+				type: 1
+			})
+		}
+		// }
+	})
+	let question = input.dataset.questionId;
+	fetch("/submit/question/draft", {
+		method: "POST",
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify({
+			ans: ans,
+			question: question,
+			plan: '<%= plan %>',
+			section: '<%= selectedSection._id %>',
+			allSectionsLength: '<%= sections.length %>'
+		})
+	}).then((res) => res.json())
+		.then((data) => {
+			console.log(data);
+		})
+		.catch(Err => console.log(Err))
+}
+function onNestedTextChange(input) {
+	let inputName = input.dataset.questionId;
+	let nodes = document.getElementsByName(inputName);
+	let _nodes = []; // = document.getElementById(inputName).querySelectorAll("input");
+	nodes = [...nodes, ..._nodes]
+	let ans = [];
+	nodes.forEach(node => {
+		let value;
+		if (node.type == 'file') {
+			value = node.dataset.value;
+		} else {
+			value = node.value;
+		}
+		let text = node.dataset.text;
+		let no = node.dataset.no;
+		node
+		ans.push({
+			value,
+			text,
+			no,
+			type: 1,
+			qType: node.type,
+		})
+		// }
+	})
+	let question = input.dataset.questionId;
+	fetch("/submit/question/draft", {
+		method: "POST",
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify({
+			ans: ans,
+			question: question,
+			plan: '<%= plan %>',
+			section: '<%= selectedSection._id %>',
+			allSectionsLength: '<%= sections.length %>'
+		})
+	}).then((res) => res.json())
+		.then((data) => {
+			console.log(data);
+		})
+		.catch(Err => console.log(Err))
+}
+function onFileMultiChange(input) {
+	let temp = input.files[0].name;
+	let id = input.dataset.questionId;
+	input.files[0].name = JSON.parse(JSON.stringify({
+		...input.files[0],
+		name: "somenameabcd." + temp.split(".")[1]
+	}));
+	console.log(input.files);
+	let question = input.dataset.questionId;
+	let fd = new FormData();
+	fd.append("file", input.files[0]);
+	let loader = document.getElementById(`${id}-loaderIndecator`);
+	if (loader) {
+		loader.style.display = 'block'
+	}
+	fetch("/media/upload", {
+		method: 'POST',
+		headers: {},
+		body: fd
+	}).then((res) => {
+		return res.json();
+	})
+		.then((json) => {
+			console.log('asdasd$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$');
+			console.log('json: ', json);
+			console.log('asdasd$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$');
+			let a = createElement('a', json.data);
+			document.getElementById(question + '-fileDiv').innerHTML = "";
+			document.getElementById(question + '-fileDiv').append(a);
+			let inputName = input.dataset.questionId;
+			let nodes = document.getElementsByName(inputName);
+			let ans = [{
+				type: 1,
+				no: 1,
+				value: json.data
+			}];
+			nodes.forEach(node => {
+				let text = node.dataset.text;
+				let no = node.dataset.no;
+				if (node.type != 'file') {
+					let value = node.value;
+					ans.push({
+						value,
+						text,
+						no,
+						type: 1
+					})
+				} else {
+					node.dataset.value = json.data;
+				}
+			})
+			if (loader) {
+				loader.style.display = 'none';
+				Swal.fire({
+					toast: true,
+					position: 'top-end',
+					type: 'success',
+					title: 'Your file have been uploaded successfully',
+				})
+			}
+			fetch("/submit/question/draft", {
+				method: "POST",
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					ans: ans,
+					question: question,
+					plan: '<%= plan %>',
+					section: '<%= selectedSection._id %>'
+				})
+			})
+		})
+		.catch((Err) => console.log(Err))
+}
+function handleMultiObjQuestion(input) {
+	console.log("------- handle multi obj question ------");
+	console.log(input.name);
+	console.log(input.dataset.questionId);
+	console.log("------- handle multi obj question ------");
+	let nodes = document.getElementsByName(input.name);
+	let ans = [];
+	nodes.forEach(node => {
+		let value = node.value;
+		let text = node.dataset.text;
+		let no = node.dataset.no;
+		node
+		ans.push({
+			value,
+			text,
+			no,
+			type: node.dataset.type
+		})
+	})
+	let question = input.name;
+	fetch("/submit/question/draft", {
+		method: "POST",
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify({
+			ans: ans,
+			question: question,
+			plan: '<%= plan %>',
+			section: '<%= selectedSection._id %>',
+			allSectionsLength: '<%= sections.length %>'
+		})
+	}).then((res) => res.json())
+		.then((data) => {
+			console.log(data);
+		})
+		.catch(Err => console.log(Err))
+}
+function submitPrev() {
+	let formElem = document.getElementById("surveyForm");
+	formElem.action += "&go=prev";
+	formElem.submit();
+}
+function onFileChange(e) {
+	let question = e.dataset.questionId;
+	let id = e.dataset.questionId;
+	let temp = e.files[0].name;
+	e.files[0].name = JSON.parse(JSON.stringify({
+		...e.files[0],
+		name: "somenameabcd." + temp.split(".")[1]
+	}));
+	let fd = new FormData();
+	fd.append("file", e.files[0]);
+	let loader = document.getElementById(`${id}-loaderIndecator`);
+	if (loader) {
+		loader.style.display = 'block'
+	}
+	fetch("/media/upload", {
+		method: 'POST',
+		headers: {},
+		body: fd
+	}).then((res) => {
+		return res.json();
+	})
+		.then((json) => {
+			// change this to qid-fileInput
+			document.getElementById(question + "-fileInput").dataset.value = json.data;
+			let a = createElement('a', json.data);
+			// change this to qid-adf
+			let node = document.getElementById(question + '-fileDiv');
+			if (node) {
+				// change this to qid-fileDiv
+				document.getElementById(question + '-fileDiv').innerHTML = "";
+				document.getElementById(question + '-fileDiv').append(a);
+			}
+			if (loader) {
+				loader.style.display = 'none';
+				Swal.fire({
+					toast: true,
+					position: 'top-end',
+					type: 'success',
+					title: 'Your file have been uploaded successfully',
+				})
+			}
+			fetch("/submit/question/draft", {
+				method: "POST",
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					ans: [{
+						value: json.data,
+						type: 1
+					}],
+					question: question,
+					plan: '<%= plan %>',
+					section: '<%= selectedSection._id %>'
+				})
+			})
+		})
+		.catch((Err) => console.log(Err))
+}
+function createText(name) {
+	let label = document.createElement('label');
+	let el = document.createElement('input');
+	el.type = 'text';
+	el.name = name;
+	el.dataset.type = 2;
+	el.dataset.questionId = name;
+	el.classList.add('form-control');
+	el.classList.add('w-3');
+	el.addEventListener("blur", function () {
+		onInputBlur(el)
+	});
+	label.append(el);
+	return label;
+}
+function createElement(tag = 'a', href, className, blank = true, name = 'Attached File') {
+	let elem = document.createElement(tag);
+	elem.href = href;
+	elem.innerText = name
+	elem.id = 'adf';
+	if (blank) {
+		elem.target = 'blank';
+	}
+	elem.classList.add(className);
+	return elem;
+}
+function removeFile(e) {
+	console.log('fileUrl: ', e.dataset.url);
+	let inputName = e.dataset.questionId;
+	let nodes = document.getElementsByName(inputName);
+	let _nodes = []; // = document.getElementById(inputName).querySelectorAll("input");
+	nodes = [...nodes, ..._nodes]
+	let ans = [];
+	nodes.forEach(node => {
+		let value;
+		if (node.type == 'file') {
+			value = "";
+		} else {
+			value = node.value;
+		}
+		let text = node.dataset.text;
+		let no = node.dataset.no;
+		node
+		ans.push({
+			value,
+			text,
+			no,
+			type: 1,
+			qType: node.type,
+		})
+	})
+	let question = e.dataset.questionId;
+	fetch("/submit/question/draft", {
+		method: "POST",
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify({
+			ans: ans,
+			question: question,
+			plan: '<%= plan %>',
+			section: '<%= selectedSection._id %>',
+			allSectionsLength: '<%= sections.length %>'
+		})
+	}).then((res) => res.json())
+		.then((data) => {
+			console.log(data);
+		})
+		.catch(Err => console.log(Err))
+}
+
+//Re-opens accordion column on larger devices
+$(window).bind('resize load', function () {
+	if ($(this).width() > 975) {
+		$('.collapse').addClass('show');
+	}
+});
+</script>
+
+<!-- Vendor js -->
+
+<!-- Date Input-->
+
+</body>

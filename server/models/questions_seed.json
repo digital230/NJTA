@@ -1,0 +1,789 @@
+[
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b033",
+    "no": 1,
+    "section": "6145c8653b270007e71da46d",
+    "question": "What is your organization's website address?",
+    "__v": 0
+  },
+  {
+    "no": 2,
+    "options": ["GOS", "GPS", "LAP"],
+    "qtype": "radio",
+    "_id": "6145ceebf7aeef0f7c54b034",
+    "section": "6145c8653b270007e71da46d",
+    "question": "What grant type are you applying for?",
+    "__v": 0
+  },
+  {
+    "no": 3,
+    "options": [
+      "Arts Education",
+      "County Arts Agency",
+      "Crafts",
+      "Dance",
+      "Film/Radio",
+      "Folk Arts",
+      "Literature",
+      "Media",
+      "Multi-Disciplinary",
+      "Music",
+      "Opera/Musical Theatre",
+      "Presenters",
+      "Theatre",
+      "Visual Arts"
+    ],
+    "qtype": "radio",
+    "_id": "6145ceebf7aeef0f7c54b035",
+    "section": "6145c8653b270007e71da46d",
+    "question": "What discipline?",
+    "__v": 0
+  },
+  {
+    "no": 4,
+    "options": [],
+    "qtype": "multi-text",
+    "_id": "6145ceebf7aeef0f7c54b036",
+    "section": "6145c8653b270007e71da46d",
+    "question": "Please provide your organization's mission.",
+    "__v": 0
+  },
+  {
+    "no": 5,
+    "options": [],
+    "qtype": "multi-text",
+    "_id": "6145ceebf7aeef0f7c54b037",
+    "section": "6145c8653b270007e71da46d",
+    "question": "Please provide one paragraph describing the programming your organization offers.",
+    "__v": 0
+  },
+  {
+    "no": 6,
+    "options": [
+      "Teen Arts",
+      "Lectures/Workshops",
+      "Concerts/Plays/Musicals",
+      "Exhibits",
+      "Docent tours",
+      "Poetry/Play Readings",
+      "Outdoor events",
+      "Film"
+    ],
+    "qtype": "checkbox",
+    "_id": "6145ceebf7aeef0f7c54b038",
+    "section": "6145c8653b270007e71da46d",
+    "question": "Please indicate the types of events your organization offers. Check all that apply.",
+    "__v": 0
+  },
+  {
+    "no": 7,
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "_id": "6145ceebf7aeef0f7c54b039",
+    "section": "6145c8653b270007e71da46e",
+    "question": "Has your organization used the ADA Self-Assessment Survey Tool or contracted a professional assessment of its facilities and programs.",
+    "__v": 0
+  },
+  {
+    "no": 8,
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b03b",
+    "section": "6145c8653b270007e71da46e",
+    "question": "If you have completed a self-assessment, what is the date of your most recently completed self- assessment?",
+    "__v": 0
+  },
+  {
+    "no": 8,
+    "options": [],
+    "qtype": "multi-text",
+    "_id": "6145ceebf7aeef0f7c54b03a",
+    "section": "6145c8653b270007e71da46e",
+    "question": "If yes, explain the process your organization used to conduct the assessment, who from the organization was involved and how you plan to use the assessment in the future. If no, what is your process and timeline for completing a self-assessment?",
+    "__v": 0
+  },
+  {
+    "no": 9,
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "_id": "6145ceebf7aeef0f7c54b03c",
+    "section": "6145c8653b270007e71da46e",
+    "question": "Does your organization have a board-approved policy statement regarding ADA compliance?",
+    "__v": 0
+  },
+  {
+    "no": 10,
+    "options": [],
+    "qtype": "file",
+    "_id": "6145ceebf7aeef0f7c54b03d",
+    "section": "6145c8653b270007e71da46e",
+    "question": "If yes, upload your policy here.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b03e",
+    "section": "6145c8653b270007e71da46e",
+    "question": "If your organization has adopted a policy, what date was the ADA policy statement adopted?",
+    "__v": 0
+  },
+  {
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "_id": "6145ceebf7aeef0f7c54b03f",
+    "section": "6145c8653b270007e71da46e",
+    "question": "Does your organization have/share an ADA coordinator or have a designated individual who is responsible for access services/programs?",
+    "__v": 0
+  },
+  {
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "_id": "6145ceebf7aeef0f7c54b040",
+    "section": "6145c8653b270007e71da46e",
+    "question": "Does your organization have/share an Access advisory board?",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "multi-text",
+    "_id": "6145ceebf7aeef0f7c54b041",
+    "section": "6145c8653b270007e71da46e",
+    "question": "If yes, please provide advisory board information, including names and affiliations. Indicate persons with a disability with an asterisk. If no, what are your plans and timeline for establishing one?",
+    "__v": 0
+  },
+  {
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "_id": "6145ceebf7aeef0f7c54b042",
+    "section": "6145c8653b270007e71da46e",
+    "question": "Does your organization offer sensitivity training to staff, board, and/or volunteers on an annual basis?",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "multi-text",
+    "_id": "6145ceebf7aeef0f7c54b043",
+    "section": "6145c8653b270007e71da46e",
+    "question": "If yes, provide a description of the training, who conducts the sessions, and their qualifications. If not offered, what is the process and timeline for offering training opportunities?",
+    "__v": 0
+  },
+  {
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "_id": "6145ceebf7aeef0f7c54b044",
+    "section": "6145c8653b270007e71da46e",
+    "question": "Has a representative of your organization attended ADA Plan Workshops and/or Access Thursday Roundtables provided by the Cultural Access Network Project within the past two years?",
+    "__v": 0
+  },
+  {
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "_id": "6145ceebf7aeef0f7c54b045",
+    "section": "6145c8653b270007e71da46e",
+    "question": "Does your organization have a dedicated access budget?",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "multi-text",
+    "_id": "6145ceebf7aeef0f7c54b046",
+    "section": "6145c8653b270007e71da46e",
+    "question": "If yes, what is the annual budget allocation for access? If no, what is your plan and timeline to establish an access budget?",
+    "__v": 0
+  },
+  {
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "_id": "6145ceebf7aeef0f7c54b047",
+    "section": "6145c8653b270007e71da46e",
+    "question": "Does your organization have an Emergency Preparedness Plan that includes provisions for people with disabilities (i.e; audience/visitors, staff, volunteers, artists, etc.)?",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "file",
+    "_id": "6145ceebf7aeef0f7c54b048",
+    "section": "6145c8653b270007e71da46e",
+    "question": "If yes, upload your plan here.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b049",
+    "section": "6145c8653b270007e71da46e",
+    "question": "If yes, what date was the emergency preparedness plan adopted?",
+    "__v": 0
+  },
+  {
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "_id": "6145ceebf7aeef0f7c54b04a",
+    "section": "6145c8653b270007e71da46e",
+    "question": "Do you solicit feedback from people with disabilities regarding your accessibility services, marketing, and programming?",
+    "__v": 0
+  },
+  {
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "_id": "6145ceebf7aeef0f7c54b04b",
+    "section": "6145c8653b270007e71da46e",
+    "question": "Does your organization have a policy on admitting service animals?",
+    "__v": 0
+  },
+  {
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "_id": "6145ceebf7aeef0f7c54b04f",
+    "section": "6145c8653b270007e71da46f",
+    "question": "Does your organization offer employment/volunteer forms in alternate formats or offer assistance in filling out employment form?",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "file",
+    "_id": "6145ceebf7aeef0f7c54b04e",
+    "section": "6145c8653b270007e71da46f",
+    "question": "Upload your policy here",
+    "__v": 0
+  },
+  {
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "_id": "6145ceebf7aeef0f7c54b050",
+    "section": "6145c8653b270007e71da46f",
+    "question": "Does your organization have a plan to provide reasonable accommodations for meetings and employee/volunteer interviews if its current office is not accessible?",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "file",
+    "_id": "6145ceebf7aeef0f7c54b04c",
+    "section": "6145c8653b270007e71da46e",
+    "question": "If yes, please upload your policy here.",
+    "__v": 0
+  },
+  {
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "_id": "6145ceebf7aeef0f7c54b053",
+    "section": "6145c8653b270007e71da470",
+    "question": "Does the organization have a board-approved procedure for accepting grievances from the public?",
+    "__v": 0
+  },
+  {
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "_id": "6145ceebf7aeef0f7c54b051",
+    "section": "6145c8653b270007e71da46f",
+    "question": "Is your organization proactive in hiring artists/staff/volunteers with disabilities?",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "file",
+    "_id": "6145ceebf7aeef0f7c54b054",
+    "section": "6145c8653b270007e71da470",
+    "question": "If yes, please upload the procedure here",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b055",
+    "section": "6145c8653b270007e71da470",
+    "question": "If yes, what date was it adopted?",
+    "__v": 0
+  },
+  {
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "_id": "6145ceebf7aeef0f7c54b056",
+    "section": "6145c8653b270007e71da471",
+    "question": "Does your organization currently offer or plan to offer virtual programming (i.e; online readings, performances, webinars, videos, workshops, classes, exhibits, etc).",
+    "__v": 0
+  },
+  {
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "_id": "6145ceebf7aeef0f7c54b04d",
+    "section": "6145c8653b270007e71da46f",
+    "question": "Does your organization have an employment non-discrimination policy statement that includes people with disabilities?",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b058",
+    "section": "6145c8653b270007e71da471",
+    "question": "Are you currently incorporating or do you plan to incorporate access services (I.e; open captioning, sign interpretation, audio description, services for those on the spectrum, etc.) with any of your virtual programs?",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b059",
+    "section": "6145c8653b270007e71da472",
+    "question": "An assistive listening system is provided in assembly areas, seating areas, and/or for guided tours or lectures.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b05a",
+    "section": "6145c8653b270007e71da472",
+    "question": "Sign language interpretation of performances, guided tours, or lectures.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b05b",
+    "section": "6145c8653b270007e71da472",
+    "question": "Open/closed captioning at performances, lectures, tours, workshops, or for film/video.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "file",
+    "_id": "6145ceebf7aeef0f7c54b052",
+    "section": "6145c8653b270007e71da46f",
+    "question": "When hiring, it is important to identify the essential and marginal functions of the job. If you have a sample job description for staff and volunteers that separates marginal and essential functions, please upload here:",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b05d",
+    "section": "6145c8653b270007e71da472",
+    "question": "Printed self-guided tours.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b05e",
+    "section": "6145c8653b270007e71da472",
+    "question": "Printed self-guided tours.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b05f",
+    "section": "6145c8653b270007e71da473",
+    "question": "Audio-described performances or guided tours.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b060",
+    "section": "6145c8653b270007e71da473",
+    "question": "Sensory seminars in conjunction with an event or exhibition.",
+    "__v": 0
+  },
+  {
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "_id": "6145ceebf7aeef0f7c54b057",
+    "section": "6145c8653b270007e71da471",
+    "question": "Does your organization plan to continue both virtual and in-person programming post COVID?",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b062",
+    "section": "6145c8653b270007e71da473",
+    "question": "Materials are available online (event brochures, programs, exhibit or display information, etc.)",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b063",
+    "section": "6145c8653b270007e71da473",
+    "question": "Digital media of exhibits, such as MP3 digital audio, smartphone, podcast, or other recordings.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b05c",
+    "section": "6145c8653b270007e71da472",
+    "question": "Advance copies of scripts, synopses, or overview of event provided.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b064",
+    "section": "6145c8653b270007e71da474",
+    "question": "Programming and services for individuals with autism, cognitive disabilities, or developmental disabilities.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b065",
+    "section": "6145c8653b270007e71da475",
+    "question": "Organization has an accessible website providing basic accessibility features (high contrast, adjustable type size, alternate text for images, plain text option, etc.)",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b061",
+    "section": "6145c8653b270007e71da473",
+    "question": "Braille materials (programs, exhibit or display signage, and/or other materials).",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b067",
+    "section": "6145c8653b270007e71da475",
+    "question": "Organization has an accessibility section on the website that promotes accessible programs and services to patrons/visitors.",
+    "__v": 0
+  },
+  {
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "_id": "6145ceebf7aeef0f7c54b068",
+    "section": "6145c8653b270007e71da475",
+    "question": "Does your organization sell event tickets online through your website or through an outside provider?.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b069",
+    "section": "6145c8653b270007e71da475",
+    "question": "Organization offers seating diagram or chart showing location of accessible seating for ticket sales on its website or through an online ticketing service.",
+    "__v": 0
+  },
+  {
+    "options": ["Yes", "No"],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b06a",
+    "section": "6145c8653b270007e71da475",
+    "question": "Organization offers tickets in all price ranges to people with disabilities and up to three companions requesting accessible seating.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b066",
+    "section": "6145c8653b270007e71da475",
+    "question": "Organization has an accessibility statement on their website.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b06c",
+    "section": "6145c8653b270007e71da475",
+    "question": "Organization offers discounted ticket prices to individuals with disabilities and their companion.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b06d",
+    "section": "6145c8653b270007e71da476",
+    "question": "Marketing materials are available or offered in alternate formats (e.g. large print/Braille/electronic media).",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "multi-text",
+    "_id": "6145ceebf7aeef0f7c54b06b",
+    "section": "6145c8653b270007e71da475",
+    "question": "If yes, please explain the details here. If not, please explain your plan and timeline to implement this ticketing policy.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b06e",
+    "section": "6145c8653b270007e71da476",
+    "question": "Social media posts are accessible (e.g. Alt text, captioned videos, image descriptions).",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b06f",
+    "section": "6145c8653b270007e71da476",
+    "question": "Brochures and other marketing materials list appropriate international access symbols and a statement regarding accessibility policies.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b070",
+    "section": "6145c8653b270007e71da476",
+    "question": "Organization has reasonable advance notification policy for patrons interested in utilizing its programs and services (e.g. sign interpretation, large print programs, etc).",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "multi-text",
+    "_id": "6145ceebf7aeef0f7c54b071",
+    "section": "6145c8653b270007e71da476",
+    "question": "If organization has an advanced notification policy, please provide here.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b072",
+    "section": "6145c8653b270007e71da476",
+    "question": "Organization utilizes its ADA advisory board or similar representation to reach patrons with disabilities.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b073",
+    "section": "6145c8653b270007e71da476",
+    "question": "Organization has developed or is planning to develop a targeted marketing approach to reach out to patrons with disabilities.",
+    "__v": 0
+  },
+  {
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "_id": "6145ceebf7aeef0f7c54b074",
+    "section": "6145c8653b270007e71da476",
+    "question": "Does your organization tour or use other facilities than those you own?",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "multi-text",
+    "_id": "6145ceebf7aeef0f7c54b076",
+    "section": "6145c8653b270007e71da477",
+    "question": "Please describe the accessible route from public transportation to the facility.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b077",
+    "section": "6145c8653b270007e71da477",
+    "question": "If there is not an accessible route, please explain your goals for working with local/community officials to establish one in each of the following fiscal years.  ",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "multi-text",
+    "_id": "6145ceebf7aeef0f7c54b078",
+    "section": "6145c8653b270007e71da477",
+    "question": "Please describe available ADA compliant parking.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b079",
+    "section": "6145c8653b270007e71da477",
+    "question": "If you do not offer this accommodation, please explain your goals for offering the accommodation in each of the following fiscal years.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "multi-text",
+    "_id": "6145ceebf7aeef0f7c54b07a",
+    "section": "6145c8653b270007e71da477",
+    "question": "Please describe the accessible route from parking to primary accessible entrance.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b07b",
+    "section": "6145c8653b270007e71da477",
+    "question": "If there is not an accessible route, please explain your goals for working with local/community officials to establish one in each of the following fiscal years.  ",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "multi-text",
+    "_id": "6145ceebf7aeef0f7c54b07c",
+    "section": "6145c8653b270007e71da477",
+    "question": "Please describe ADA compliant doors to entrance, bathrooms, assembly areas, gallery/display areas.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b07d",
+    "section": "6145c8653b270007e71da477",
+    "question": "If you do not offer this accommodation, please explain your goals for offering the accommodation in each of the following fiscal years.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "multi-text",
+    "_id": "6145ceebf7aeef0f7c54b07e",
+    "section": "6145c8653b270007e71da477",
+    "question": "If your facility has multiple levels, please describe the availability of an elevator or interior ramps at level or floor changes.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b07f",
+    "section": "6145c8653b270007e71da477",
+    "question": "If you do not offer this accommodation, please explain your goals for offering the accommodation in each of the following fiscal years.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "multi-text",
+    "_id": "6145ceebf7aeef0f7c54b080",
+    "section": "6145c8653b270007e71da477",
+    "question": "Restrooms (or gender-inclusive bathroom) used by the public are ADA compliant.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b081",
+    "section": "6145c8653b270007e71da477",
+    "question": "If you do not offer this accommodation, please explain your goals for offering the accommodation in each of the following fiscal years.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "multi-text",
+    "_id": "6145ceebf7aeef0f7c54b082",
+    "section": "6145c8653b270007e71da477",
+    "question": "Seating areas of facility have the correct percentage of wheelchair locations on each level as required by the law. Please include percentage of seats that are wheelchair accessible in your description.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b083",
+    "section": "6145c8653b270007e71da477",
+    "question": "If you do not offer this accommodation, please explain your goals for offering the accommodation in each of the following fiscal years.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b084",
+    "section": "6145c8653b270007e71da477",
+    "question": "Please describe ADA compliant signage in all facilities your maintain (performance, exhibit, classroom, office and rehearsal space), including Braille, font size, contrast, mounting, and height.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b085",
+    "section": "6145c8653b270007e71da477",
+    "question": "If you do not offer this accommodation, please explain your goals for offering the accommodation in each of the following fiscal years.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "multi-text",
+    "_id": "6145ceebf7aeef0f7c54b086",
+    "section": "6145c8653b270007e71da477",
+    "question": "Please describe ADA compliant box office window or information desk.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b087",
+    "section": "6145c8653b270007e71da477",
+    "question": "If you do not offer this accommodation, please explain your goals for offering the accommodation in each of the following fiscal years.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "multi-text",
+    "_id": "6145ceebf7aeef0f7c54b088",
+    "section": "6145c8653b270007e71da477",
+    "question": "Please describe ADA compliant concession stand or gift shop.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b089",
+    "section": "6145c8653b270007e71da477",
+    "question": "If you do not offer this accommodation, please explain your goals for offering the accommodation in each of the following fiscal years.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "multi-text",
+    "_id": "6145ceebf7aeef0f7c54b08a",
+    "section": "6145c8653b270007e71da477",
+    "question": "Please describe ADA compliant performance/dressing room/artist space/classroom.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b08b",
+    "section": "6145c8653b270007e71da477",
+    "question": "If you do not offer this accommodation, please explain your goals for offering the accommodation in each of the following fiscal years.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b08c",
+    "section": "6145c8653b270007e71da477",
+    "question": "Who in your organization is responsible for facility access oversight",
+    "__v": 0
+  },
+  {
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "_id": "6145ceebf7aeef0f7c54b08d",
+    "section": "6145c8653b270007e71da477",
+    "question": "Has your organization budgeted for access capital needs?",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "file",
+    "_id": "6145ceebf7aeef0f7c54b08e",
+    "section": "6145c8653b270007e71da477",
+    "question": "OPTIONAL: To help the Cultural Access Network Project establish an ongoing library of resources, we would like to collect photos and/or marketing materials related to your access programming.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "file",
+    "_id": "6145ceebf7aeef0f7c54b08f",
+    "section": "6145c8653b270007e71da477",
+    "question": "Upload additional photo here.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "file",
+    "_id": "6145ceebf7aeef0f7c54b090",
+    "section": "6145c8653b270007e71da477",
+    "question": "Upload additional photo here.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "text",
+    "_id": "6145ceebf7aeef0f7c54b091",
+    "section": "6145c8653b270007e71da477",
+    "question": "Please enter the date on which you are submitting this form.",
+    "__v": 0
+  }
+]

@@ -1,0 +1,26 @@
+<label for="<%= selectedSection.questions[j].id %>"></label>
+<% for(let k=0; k<selectedSection.questions[j].options.length; k++) { %>
+<label>
+  <input id="checkbox" onchange="onNestedCheckChange(this)" data-question-id="<%= selectedSection.questions[j]._id %>" data-no="1" data-type="1" <%= isCheckboxSelected(selectedSection.questions[j].ans, selectedSection.questions[j].options[k], 1) ? "checked" : "" %> type="checkbox" id="<%= selectedSection.questions[j]._id %>" name="<%= selectedSection.questions[j]._id %>" value="<%= selectedSection.questions[j].options[k] %>">
+  <%= selectedSection.questions[j].options[k] %>
+</label>
+<% } %>
+
+
+<% let subquestions = selectedSection.questions[j].subQuestions %>
+
+<% for(let n=0; n<subquestions.length; n++) { %>
+<% if(subquestions[n].qtype == 'multi-text') {%>
+<h4><%= subquestions[n].question %></h4>
+<div class="form-group">
+  <textarea onblur="onNestedCheckChange(this)" class="form-control mb-2" data-text="<%= subquestions[n].question %>" name="<%= selectedSection.questions[j]._id %>" data-question-id="<%= selectedSection.questions[j]._id %>" data-type="1" data-no="<%= subquestions[n].no %>"><%= getTheAnswer(selectedSection.questions[j].ans, subquestions[n].no) %></textarea>
+</div>
+<% } %>
+<% } %>
+<% for(let k = 0; k<selectedSection.questions[j].ans.length; k++) { %>
+<% if(isSecondary(selectedSection.questions[j].ans[k])) {%>
+<div class="form-group">
+  <input class="form-control w-3" style="color: red;" data-type="2" data-question-id="<%= selectedSection.questions[j]._id %>" onblur="onInputBlur(this, 'text', '<%= selectedSection.questions[j]._id %>')" value="<%= selectedSection.questions[j].ans[k].value %>" type="text" id="<%= selectedSection.questions[j]._id %>" name="<%= selectedSection._id %>~<%= selectedSection.questions[j]._id %>">
+</div>
+<% } %>
+<% } %>

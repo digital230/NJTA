@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>New Jersey Theatre Alliance Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
+
+    <!-- App css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/app.css" rel="stylesheet" type="text/css" />
+
+    <style>
+      h1,
+      p {
+        text-transform: capitalize;
+        font-family: sans-serif;
+      }
+
+      li {
+        font-family: sans-serif;
+      }
+
+      .dark-gray {
+        color: rgb(73, 73, 73);
+      }
+
+      h3 {
+        font-size: 15px;
+      }
+    </style>
+  </head>
+
+  <body style="background-color: white">
+    <h3>Date Submitted: {{formatTime lossDate "MM-DD-YYYY"}}</h3>
+    <div style="padding: 20px">
+      <div class="row">
+        <div class="col-12 col-lg-12 mt-4">
+          {{#each sections}}
+          <div
+            class="card"
+            style="
+              background-color: white;
+              padding: 20px;
+              border-radius: 12px;
+              border-width: 2px;
+              border-color: red;
+              margin-bottom: 20px;
+              min-height: 710px;
+            "
+          >
+            <div class="card-body">
+              <h1 style="margin-bottom: 5px; font-size: 22px">
+                {{section.title}}
+              </h1>
+              {{#each questionair}}
+              <p
+                class="dark-gray"
+                style="
+                  font-size: 10px;
+                  font-weight: bold;
+                  margin-bottom: 10px;
+                  margin-top: 10px;
+                "
+              >
+                Q {{inc @index}}. {{question.question}}
+              </p>
+              {{#each ans}} {{#if (ifTypeTwo type)}}
+              <li style="color: red; margin-top: 10px">{{value}}</li>
+              {{else}} {{#if (ifCond value)}}
+              <li style="font-size: 8px; color: gray">{{link value}}</li>
+              {{else}} {{#if (hasText text)}}
+              <p style="margin-bottom: 0px; font-size: 8px">
+                <strong>{{text}} : </strong>
+              </p>
+              <p style="margin-bottom: 0px; font-size: 8px">
+                {{#if (hasText value)}}
+                <span style="margin-left: 5px; color: gray">{{value}}</span>
+                {{else}}
+                <span style="color: red; text-decoration: underline"
+                  >Not answered yet</span
+                >
+                {{/if}}
+              </p>
+              {{else}}
+              <li style="font-size: 8px; color: gray">{{value}}</li>
+              {{/if}} {{/if}} {{/if}} {{/each}} {{/each}}
+              <div style="page-break-before: always"></div>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

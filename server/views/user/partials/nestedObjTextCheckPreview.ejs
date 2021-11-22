@@ -1,0 +1,19 @@
+<% let answers = previews[i].questions[j].ans.sort((a, b) => a.no - b.no).sort((a, b) => a.type - b.type) %>
+<% for(let m = 0; m<answers.length; m++) { %>
+<% if(answers[m].type != 2) {%>
+<% if(!answers[m].text) {%>
+<li><%= answers[m].value %> </li>
+<% } else { %>
+<p style="margin-bottom: 0px;"><strong class="mr-2"><%= answers[m].text %> </strong> </p>
+<p style="margin-bottom: 10px;">
+  <% if(answers[m].value) { %>
+  <span><%= answers[m].value %> </span>
+  <% } else {%>
+  <span class="text-danger"> Answer not added yet. </span>
+  <% } %>
+</p>
+<% } %>
+<% } else { %>
+<p class="text-highlight"><%= answers[m].value %></p>
+<% } %>
+<% } %>

@@ -1,0 +1,18 @@
+<label for="">
+  <div class="form-group">
+    <input class="form-control w-3" onblur="onInputBlur(this)" data-question-id="<%= selectedSection.questions[j]._id %>" value="<%= getTheAnswer(selectedSection.questions[j].ans, 1) %>" data-type="1" data-no="1" type="text" id="<%= selectedSection.questions[j]._id %>" name="<%= selectedSection.questions[j]._id  %>">
+  </div>
+
+
+
+  <span>
+    <% for(let k = 0; k<selectedSection.questions[j].ans.length; k++) { %>
+    <% if(isSecondary(selectedSection.questions[j].ans[k])) { %>
+    <div class="form-group">
+      <input class="form-control w-3" onblur="onInputBlur(this)" value="<%= selectedSection.questions[j].ans[k].value %>" data-question-id="<%= selectedSection.questions[j]._id %>" data-type="2" data-no="2" type="text" id="<%= selectedSection.questions[j]._id %>" name="<%= selectedSection.questions[j]._id  %>">
+    </div>
+    <% } %>
+    <% } %>
+  </span>
+
+</label>

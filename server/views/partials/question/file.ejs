@@ -1,0 +1,26 @@
+<label for="">
+  <input style="visibility: hidden; position: absolute;" type="text" id="<%= selectedSection.questions[j]._id %>-fileInput" name="<%= selectedSection._id+'~'+selectedSection.questions[j]._id %>" value="<%= selectedSection.questions[j].ans && selectedSection.questions[j].ans.length > 0 ? selectedSection.questions[j].ans : '++value++'%>">
+  <div class="File__div">
+    <input onchange="onFileChange(this)" type="file" accept="image/*,.pdf" id="<%= selectedSection.questions[j]._id %>-fileInput" data-type="1" data-no="1" data-question-id="<%= selectedSection.questions[j]._id %>" name="<%= selectedSection.questions[j]._id %>">
+    <div id="<%= selectedSection.questions[j]._id %>-loaderIndecator" class="loader"></div>
+  </div>
+  <div id="<%= selectedSection.questions[j]._id %>-fileDiv" style="display: block;" class="mb-2 mt-2">
+  </div>
+  <% if(getFileUrl(selectedSection.questions[j].ans, 1)) { %>
+  <div class="form-group">
+    <a href="<%= getFileUrl(selectedSection.questions[j].ans, 1) %>" target="blank"> <i class="fa fa-file mr-2"></i> Attached File</a>
+    <!-- <h6 data-question-id="<%= selectedSection.questions[j]._id %>" onclick="removeFile(this)">remove</h6> -->
+  </div>
+  <% } %>
+
+
+  <span>
+    <% for(let k = 0; k<selectedSection.questions[j].ans.length; k++) { %>
+    <% if(isSecondary(selectedSection.questions[j].ans[k])) { %>
+    <div class="form-group">
+      <input class="form-control w-3" onblur="onInputBlur(this)" value="<%= selectedSection.questions[j].ans[k].value %>" data-question-id="<%= selectedSection.questions[j]._id %>" data-type="2" data-no="2" type="text" id="<%= selectedSection.questions[j]._id %>" name="<%= selectedSection.questions[j]._id  %>">
+    </div>
+    <% } %>
+    <% } %>
+  </span>
+</label>

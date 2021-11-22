@@ -1,0 +1,2484 @@
+[
+  {
+    "_id": "614c3619285fa8b5779faa1d",
+    "options": [],
+    "qtype": "multi-obj-text",
+    "subQuestions": [
+      {
+        "no": 1,
+        "question": "Organization",
+        "qtype": "text"
+      },
+      {
+        "no": 2,
+        "question": "Contact Name",
+        "qtype": "text"
+      },
+      {
+        "no": 3,
+        "question": "Contact Pronouns (i.e she/hers, they/them/their)",
+        "qtype": "text"
+      },
+      {
+        "no": 4,
+        "question": "Address",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "question": "City/Town",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "question": "Zip Code",
+        "qtype": "text"
+      },
+      {
+        "no": 7,
+        "question": "County",
+        "qtype": "text"
+      },
+      {
+        "no": 8,
+        "qtype": "text",
+        "question": "Email Address"
+      },
+      {
+        "no": 9,
+        "qtype": "text",
+        "question": "Phone Number"
+      }
+    ],
+    "no": 1,
+    "section": "6145c8653b270007e71da46d",
+    "question": "Please provide your organizational information",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b033",
+    "options": [],
+    "qtype": "text",
+    "subQuestions": [],
+    "no": 2,
+    "section": "6145c8653b270007e71da46d",
+    "question": "What is your organization's website address?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b034",
+    "options": ["GOS", "GPS", "LAP"],
+    "qtype": "radio",
+    "subQuestions": [],
+    "no": 3,
+    "section": "6145c8653b270007e71da46d",
+    "question": "What grant type are you applying for?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b035",
+    "options": [
+      "Arts Education",
+      "County Arts Agency",
+      "Crafts",
+      "Dance",
+      "Film/Radio",
+      "Folk Arts",
+      "Literature",
+      "Media",
+      "Multi-Disciplinary",
+      "Music",
+      "Opera/Musical Theatre",
+      "Presenters",
+      "Theatre",
+      "Visual Arts"
+    ],
+    "qtype": "radio",
+    "subQuestions": [],
+    "no": 4,
+    "section": "6145c8653b270007e71da46d",
+    "question": "What discipline?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b036",
+    "options": [],
+    "qtype": "multi-text",
+    "subQuestions": [],
+    "no": 5,
+    "section": "6145c8653b270007e71da46d",
+    "question": "Please provide your organization's mission.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b037",
+    "options": [],
+    "qtype": "multi-text",
+    "subQuestions": [],
+    "no": 6,
+    "section": "6145c8653b270007e71da46d",
+    "question": "Please provide one paragraph describing the programming your organization offers.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b038",
+    "options": [
+      "Teen Arts",
+      "Lectures/Workshops",
+      "Concerts/Plays/Musicals",
+      "Exhibits",
+      "Docent tours",
+      "Poetry/Play Readings",
+      "Outdoor events",
+      "Film"
+    ],
+    "qtype": "checkbox-multi",
+    "subQuestions": [
+      {
+        "question": "If other, please specify below",
+        "qtype": "multi-text",
+        "options": [],
+        "no": 2
+      }
+    ],
+    "no": 7,
+    "section": "6145c8653b270007e71da46d",
+    "question": "Please indicate the types of events your organization offers. Check all that apply.",
+    "__v": 0
+  },
+  {
+    "_id": "61499095f61f83e952fb7d06",
+    "options": [],
+    "qtype": "multi-text",
+    "subQuestions": [],
+    "no": 8,
+    "section": "6145c8653b270007e71da46d",
+    "question": " Since the submission of your last ADA plan, please provide a brief overview (350 words or less) of your organization's access efforts in a variety of areas, (policies, marketing, programming, facilities, etc).",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b039",
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "subQuestions": [],
+    "no": 9,
+    "section": "6145c8653b270007e71da46e",
+    "question": "Has your organization used the ADA Self-Assessment Survey Tool or contracted a professional assessment of its facilities and programs.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b03a",
+    "options": [],
+    "qtype": "multi-text",
+    "subQuestions": [],
+    "no": 10,
+    "section": "6145c8653b270007e71da46e",
+    "question": "If yes, explain the process your organization used to conduct the assessment, who from the organization was involved and how you plan to use the assessment in the future. If no, what is your process and timeline for completing a self-assessment?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b03b",
+    "options": [],
+    "qtype": "text",
+    "subQuestions": [],
+    "no": 11,
+    "section": "6145c8653b270007e71da46e",
+    "question": "If you have completed a self-assessment, what is the date of your most recently completed self- assessment?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b03c",
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "subQuestions": [],
+    "no": 12,
+    "section": "6145c8653b270007e71da46e",
+    "question": "Does your organization have a board-approved policy statement regarding ADA compliance?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b03d",
+    "options": [],
+    "qtype": "file",
+    "subQuestions": [],
+    "no": 13,
+    "section": "6145c8653b270007e71da46e",
+    "question": "If yes, upload your policy here.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "file-multi",
+    "subQuestions": [
+      {
+        "no": 2,
+        "qtype": "multi-text",
+        "options": [],
+        "question": "If your organizaition does not have one, what is the process and timeline for adopting such a policy?"
+      }
+    ],
+    "no": 31,
+    "section": "6145c8653b270007e71da46f",
+    "question": "If yes, upload your policy here.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b03e",
+    "options": [],
+    "qtype": "text",
+    "subQuestions": [],
+    "no": 14,
+    "section": "6145c8653b270007e71da46e",
+    "question": "If your organization has adopted a policy, what date was the ADA policy statement adopted?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b03f",
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "subQuestions": [],
+    "no": 15,
+    "section": "6145c8653b270007e71da46e",
+    "question": "Does your organization have/share an ADA coordinator or have a designated individual who is responsible for access services/programs?",
+    "__v": 0
+  },
+  {
+    "_id": "614ad324285fa8b5779f8a09",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "question": "Name",
+        "options": [],
+        "qtype": "text",
+        "no": 2
+      },
+      {
+        "question": "Title",
+        "options": [],
+        "qtype": "text",
+        "no": 3
+      },
+      {
+        "question": "Email",
+        "options": [],
+        "qtype": "text",
+        "no": 4
+      },
+      {
+        "question": "Phone",
+        "options": [],
+        "qtype": "text",
+        "no": 5
+      },
+      {
+        "question": "If no, describe your plan for identifying a ADA Coordinator or designated individual:",
+        "options": [],
+        "qtype": "multi-text",
+        "no": 6
+      }
+    ],
+    "no": 16,
+    "section": "6145c8653b270007e71da46e",
+    "question": "If yes, please provide ADA Coordinator/designated individual information. If your organization does not have a coordinator, please explain the plan for identifying one.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b040",
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "subQuestions": [],
+    "no": 17,
+    "section": "6145c8653b270007e71da46e",
+    "question": "Does your organization have/share an Access advisory board?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b041",
+    "options": [],
+    "qtype": "multi-text",
+    "subQuestions": [],
+    "no": 18,
+    "section": "6145c8653b270007e71da46e",
+    "question": "If yes, please provide advisory board information, including names and affiliations. Indicate persons with a disability with an asterisk. If no, what are your plans and timeline for establishing one?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b042",
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "subQuestions": [],
+    "no": 19,
+    "section": "6145c8653b270007e71da46e",
+    "question": "Does your organization offer sensitivity training to staff, board, and/or volunteers on an annual basis?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b043",
+    "options": [],
+    "qtype": "multi-text",
+    "subQuestions": [],
+    "no": 20,
+    "section": "6145c8653b270007e71da46e",
+    "question": "If yes, provide a description of the training, who conducts the sessions, and their qualifications. If not offered, what is the process and timeline for offering training opportunities?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b044",
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "subQuestions": [],
+    "no": 21,
+    "section": "6145c8653b270007e71da46e",
+    "question": "Has a representative of your organization attended ADA Plan Workshops and/or Access Thursday Roundtables provided by the Cultural Access Network Project within the past two years?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b045",
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "subQuestions": [],
+    "no": 22,
+    "section": "6145c8653b270007e71da46e",
+    "question": "Does your organization have a dedicated access budget?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b046",
+    "options": [],
+    "qtype": "multi-text",
+    "subQuestions": [],
+    "no": 23,
+    "section": "6145c8653b270007e71da46e",
+    "question": "If yes, what is the annual budget allocation for access? If no, what is your plan and timeline to establish an access budget?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b047",
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "subQuestions": [],
+    "no": 24,
+    "section": "6145c8653b270007e71da46e",
+    "question": "Does your organization have an Emergency Preparedness Plan that includes provisions for people with disabilities (i.e; audience/visitors, staff, volunteers, artists, etc.)?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b048",
+    "options": [],
+    "qtype": "file-multi",
+    "subQuestions": [{
+      "question": "If your organization does not have one, what is the timeline for adopting such a plan?",
+      "qtype": "multi-text",
+      "options": [],
+      "no": 2
+  }],
+    "no": 25,
+    "section": "6145c8653b270007e71da46e",
+    "question": "If yes, upload your plan here.",
+    "__v": 0
+  },
+  {
+    "options": [],
+    "qtype": "file",
+    "subQuestions": [],
+    "no": 69,
+    "section": "6145c8653b270007e71da476",
+    "question": "If you provide a letter of agreement rider, or ADA checklist (see self-assessment survey tool appendix) to the landlord or manager of the venue in which the programming will take place, or if your services are contracted, presented, or part of a larger production/festival/exhibit, you are still responsible for advocating and requesting accessibility services for your artists and the patrons who will participate/view the performance/exhibit.  Please attach your rider, LOA or ADA checklist here.     Please be sure the file name includes your organization's name. EXAMPLE: NJTheatreAlliance.tour.rider.doc",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b049",
+    "options": [],
+    "qtype": "text",
+    "subQuestions": [],
+    "no": 26,
+    "section": "6145c8653b270007e71da46e",
+    "question": "If yes, what date was the emergency preparedness plan adopted?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b04a",
+    "options": ["Yes", "No"],
+    "qtype": "radio-multi",
+    "subQuestions": [
+      {
+        "question": "Please offer further details here.",
+        "qtype": "multi-text",
+        "no": 2,
+        "options": []
+      }
+    ],
+    "no": 27,
+    "section": "6145c8653b270007e71da46e",
+    "question": "Do you solicit feedback from people with disabilities regarding your accessibility services, marketing, and programming?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b04b",
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "subQuestions": [],
+    "no": 28,
+    "section": "6145c8653b270007e71da46e",
+    "question": "Does your organization have a policy on admitting service animals?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b04c",
+    "options": [],
+    "qtype": "file-multi",
+    "subQuestions": [
+      {
+        "question": "If your organizaition does not have one, what is the timeline for adopting such a plan?",
+        "qtype": "multi-text",
+        "options": [],
+        "no": 2
+      }
+    ],
+    "no": 29,
+    "section": "6145c8653b270007e71da46e",
+    "question": "If yes, please upload your policy here.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b04d",
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "subQuestions": [],
+    "no": 30,
+    "section": "6145c8653b270007e71da46f",
+    "question": "Does your organization have an employment non-discrimination policy statement that includes people with disabilities?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b04f",
+    "options": ["Yes", "No"],
+    "qtype": "radio-multi",
+    "subQuestions": [
+      {
+        "question": "Please offer further details.",
+        "qtype": "multi-text",
+        "options": [],
+        "no": 2
+      }
+    ],
+    "no": 32,
+    "section": "6145c8653b270007e71da46f",
+    "question": "Does your organization offer employment/volunteer forms in alternate formats or offer assistance in filling out employment form?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b050",
+    "options": ["Yes", "No"],
+    "qtype": "radio-multi",
+    "subQuestions": [
+      {
+        "question": "Please offer further details here.",
+        "qtype": "multi-text",
+        "no": 2,
+        "options": []
+      }
+    ],
+    "no": 33,
+    "section": "6145c8653b270007e71da46f",
+    "question": "Does your organization have a plan to provide reasonable accommodations for meetings and employee/volunteer interviews if its current office is not accessible?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b051",
+    "options": ["Yes", "No"],
+    "qtype": "radio-multi",
+    "subQuestions": [
+      {
+        "question": "Please offer further details here.",
+        "qtype": "multi-text",
+        "no": 2,
+        "options": []
+      }
+    ],
+    "no": 34,
+    "section": "6145c8653b270007e71da46f",
+    "question": "Is your organization proactive in hiring artists/staff/volunteers with disabilities?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b052",
+    "options": [],
+    "qtype": "file",
+    "subQuestions": [],
+    "no": 35,
+    "section": "6145c8653b270007e71da46f",
+    "question": "When hiring, it is important to identify the essential and marginal functions of the job. If you have a sample job description for staff and volunteers that separates marginal and essential functions, please upload here:",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b053",
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "subQuestions": [],
+    "no": 36,
+    "section": "6145c8653b270007e71da470",
+    "question": "Does the organization have a board-approved procedure for accepting grievances from the public?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b054",
+    "options": [],
+    "qtype": "file-multi",
+    "subQuestions": [
+      {
+        "question": "If no, please explain your organization's process and timeline for adopting a Grievance Procedure.",
+        "qtype": "multi-text",
+        "options": [],
+        "no": 2
+      }
+    ],
+    "no": 37,
+    "section": "6145c8653b270007e71da470",
+    "question": "If yes, please upload the procedure here",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b055",
+    "options": [],
+    "qtype": "text",
+    "subQuestions": [],
+    "no": 38,
+    "section": "6145c8653b270007e71da470",
+    "question": "If yes, what date was it adopted?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b056",
+    "options": ["Yes", "No"],
+    "qtype": "radio-multi",
+    "subQuestions": [
+      {
+        "question": "Please offer further details, including the type of programming, estimated cost, and the person responsible for virtual programming:",
+        "options": [],
+        "qtype": "multi-text",
+        "no": 2
+      }
+    ],
+    "no": 39,
+    "section": "6145c8653b270007e71da471",
+    "question": "Does your organization currently offer or plan to offer virtual programming (i.e; online readings, performances, webinars, videos, workshops, classes, exhibits, etc).",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b057",
+    "options": ["Yes", "No"],
+    "qtype": "radio-multi",
+    "subQuestions": [
+      {
+        "question": "Please offer further details, including the type of programming, estimated cost, and the person responsible for virtual programming:",
+        "options": [],
+        "qtype": "multi-text",
+        "no": 2
+      }
+    ],
+    "no": 40,
+    "section": "6145c8653b270007e71da471",
+    "question": "Does your organization plan to continue both virtual and in-person programming post COVID?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b058",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 2,
+        "question": "Is this already in practice ?",
+        "qtype": "radio",
+        "options": ["yes", "no"]
+      },
+      {
+        "no": 3,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "question": "Person/title responsible for Implementation : ",
+        "options": [],
+        "qtype": "text"
+      },
+      {
+        "no": 7,
+        "options": [],
+        "question": "Estimated Cost",
+        "qtype": "text"
+      },
+      {
+        "question": "If not applicable, please explain:",
+        "no": 8,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 41,
+    "section": "6145c8653b270007e71da471",
+    "question": "Are you currently incorporating or do you plan to incorporate access services (I.e; open captioning, sign interpretation, audio description, services for those on the spectrum, etc.) with any of your virtual programs?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b059",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 2,
+        "question": "Is this already in practice ?",
+        "qtype": "radio",
+        "options": ["yes", "no"]
+      },
+      {
+        "no": 3,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "question": "Person/title responsible for Implementation : ",
+        "options": [],
+        "qtype": "text"
+      },
+      {
+        "no": 7,
+        "options": [],
+        "question": "Estimated Cost",
+        "qtype": "text"
+      },
+      {
+        "question": "If not applicable, please explain:",
+        "no": 8,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 42,
+    "section": "6145c8653b270007e71da472",
+    "question": "An assistive listening system is provided in assembly areas, seating areas, and/or for guided tours or lectures.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b05a",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 2,
+        "question": "Is this already in practice ?",
+        "qtype": "radio",
+        "options": ["yes", "no"]
+      },
+      {
+        "no": 3,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "question": "Person/title responsible for Implementation : ",
+        "options": [],
+        "qtype": "text"
+      },
+      {
+        "no": 7,
+        "options": [],
+        "question": "Estimated Cost",
+        "qtype": "text"
+      },
+      {
+        "question": "If not applicable, please explain:",
+        "no": 8,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 43,
+    "section": "6145c8653b270007e71da472",
+    "question": "Sign language interpretation of performances, guided tours, or lectures.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b05b",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 2,
+        "question": "Is this already in practice ?",
+        "qtype": "radio",
+        "options": ["yes", "no"]
+      },
+      {
+        "no": 3,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "question": "Person/title responsible for Implementation : ",
+        "options": [],
+        "qtype": "text"
+      },
+      {
+        "no": 7,
+        "options": [],
+        "question": "Estimated Cost",
+        "qtype": "text"
+      },
+      {
+        "question": "If not applicable, please explain:",
+        "no": 8,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 44,
+    "section": "6145c8653b270007e71da472",
+    "question": "Open/closed captioning at performances, lectures, tours, workshops, or for film/video.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b05c",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 2,
+        "question": "Is this already in practice ?",
+        "qtype": "radio",
+        "options": ["yes", "no"]
+      },
+      {
+        "no": 3,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "question": "Person/title responsible for Implementation : ",
+        "options": [],
+        "qtype": "text"
+      },
+      {
+        "no": 7,
+        "options": [],
+        "question": "Estimated Cost",
+        "qtype": "text"
+      },
+      {
+        "question": "If not applicable, please explain:",
+        "no": 8,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 45,
+    "section": "6145c8653b270007e71da472",
+    "question": "Advance copies of scripts, synopses, or overview of event provided.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b05d",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 2,
+        "question": "Is this already in practice ?",
+        "qtype": "radio",
+        "options": ["yes", "no"]
+      },
+      {
+        "no": 3,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "question": "Person/title responsible for Implementation : ",
+        "options": [],
+        "qtype": "text"
+      },
+      {
+        "no": 7,
+        "options": [],
+        "question": "Estimated Cost",
+        "qtype": "text"
+      },
+      {
+        "question": "If not applicable, please explain:",
+        "no": 8,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 46,
+    "section": "6145c8653b270007e71da472",
+    "question": "Printed self-guided tours.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b05f",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 2,
+        "question": "Is this already in practice ?",
+        "qtype": "radio",
+        "options": ["yes", "no"]
+      },
+      {
+        "no": 3,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "question": "Person/title responsible for Implementation : ",
+        "options": [],
+        "qtype": "text"
+      },
+      {
+        "no": 7,
+        "options": [],
+        "question": "Estimated Cost",
+        "qtype": "text"
+      },
+      {
+        "question": "If not applicable, please explain:",
+        "no": 8,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 47,
+    "section": "6145c8653b270007e71da473",
+    "question": "Audio-described performances or guided tours.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b060",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 2,
+        "question": "Is this already in practice ?",
+        "qtype": "radio",
+        "options": ["yes", "no"]
+      },
+      {
+        "no": 3,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "question": "Person/title responsible for Implementation : ",
+        "options": [],
+        "qtype": "text"
+      },
+      {
+        "no": 7,
+        "options": [],
+        "question": "Estimated Cost",
+        "qtype": "text"
+      },
+      {
+        "question": "If not applicable, please explain:",
+        "no": 8,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 48,
+    "section": "6145c8653b270007e71da473",
+    "question": "Sensory seminars in conjunction with an event or exhibition.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b061",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 2,
+        "question": "Is this already in practice ?",
+        "qtype": "radio",
+        "options": ["yes", "no"]
+      },
+      {
+        "no": 3,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "question": "Person/title responsible for Implementation : ",
+        "options": [],
+        "qtype": "text"
+      },
+      {
+        "no": 7,
+        "options": [],
+        "question": "Estimated Cost",
+        "qtype": "text"
+      },
+      {
+        "question": "If not applicable, please explain:",
+        "no": 8,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 49,
+    "section": "6145c8653b270007e71da473",
+    "question": "Braille materials (programs, exhibit or display signage, and/or other materials).",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b062",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 2,
+        "question": "Is this already in practice ?",
+        "qtype": "radio",
+        "options": ["yes", "no"]
+      },
+      {
+        "no": 3,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "question": "Person/title responsible for Implementation : ",
+        "options": [],
+        "qtype": "text"
+      },
+      {
+        "no": 7,
+        "options": [],
+        "question": "Estimated Cost",
+        "qtype": "text"
+      },
+      {
+        "question": "If not applicable, please explain:",
+        "no": 8,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 50,
+    "section": "6145c8653b270007e71da473",
+    "question": "Materials are available online (event brochures, programs, exhibit or display information, etc.)",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b063",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 1,
+        "options": ["Yes", "No"],
+        "question": "Is this already in practice?",
+        "qtype": "radio"
+      },
+      {
+        "no": 3,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "question": "Person/title responsible for Implementation : ",
+        "options": [],
+        "qtype": "text"
+      },
+      {
+        "no": 7,
+        "options": [],
+        "question": "Estimated Cost",
+        "qtype": "text"
+      },
+      {
+        "question": "If not applicable, please explain:",
+        "no": 8,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 51,
+    "section": "6145c8653b270007e71da473",
+    "question": "Digital media of exhibits, such as MP3 digital audio, smartphone, podcast, or other recordings. Do you offer story boards, visits either before or after public hours, meet-a-seat program",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b064",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 2,
+        "question": "Is this already in practice ?",
+        "qtype": "radio",
+        "options": ["yes", "no"]
+      },
+      {
+        "no": 3,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "question": "Person/title responsible for Implementation : ",
+        "options": [],
+        "qtype": "text"
+      },
+      {
+        "no": 7,
+        "options": [],
+        "question": "Estimated Cost",
+        "qtype": "text"
+      },
+      {
+        "question": "If not applicable, please explain:",
+        "no": 8,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 52,
+    "section": "6145c8653b270007e71da474",
+    "question": "Programming and services for individuals with autism, cognitive disabilities, or developmental disabilities. Do you offer story boards, visits either before or after public hours, meet-a-seat program?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b065",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 2,
+        "question": "Is this already in practice ?",
+        "qtype": "radio",
+        "options": ["yes", "no"]
+      },
+      {
+        "no": 3,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "question": "Person/title responsible for Implementation : ",
+        "options": [],
+        "qtype": "text"
+      },
+      {
+        "no": 7,
+        "options": [],
+        "question": "Estimated Cost",
+        "qtype": "text"
+      },
+      {
+        "question": "If not applicable, please explain:",
+        "no": 8,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 53,
+    "section": "6145c8653b270007e71da475",
+    "question": "Organization has an accessible website providing basic accessibility features (high contrast, adjustable type size, alternate text for images, plain text option, etc.)",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b066",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 2,
+        "question": "Is this already in practice ?",
+        "qtype": "radio",
+        "options": ["yes", "no"]
+      },
+      {
+        "no": 3,
+        "question": "If yes, please provide link here:",
+        "qtype": "text",
+        "options": []
+      },
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "no": 7,
+        "question": "Person/title responsible for Implementation : ",
+        "options": [],
+        "qtype": "text"
+      },
+      {
+        "no": 8,
+        "options": [],
+        "question": "Estimated Cost",
+        "qtype": "text"
+      },
+      {
+        "question": "If not applicable, please explain:",
+        "no": 9,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 54,
+    "section": "6145c8653b270007e71da475",
+    "question": "Organization has an accessibility statement on their website.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b067",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 2,
+        "question": "Is this already in practice ?",
+        "qtype": "radio",
+        "options": ["yes", "no"]
+      },
+      {
+        "no": 3,
+        "question": "If yes, please provide link here:",
+        "qtype": "text",
+        "options": []
+      },
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "no": 7,
+        "question": "Person/title responsible for Implementation : ",
+        "options": [],
+        "qtype": "text"
+      },
+      {
+        "no": 8,
+        "options": [],
+        "question": "Estimated Cost",
+        "qtype": "text"
+      },
+      {
+        "question": "If not applicable, please explain:",
+        "no": 9,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 55,
+    "section": "6145c8653b270007e71da475",
+    "question": "Organization has an accessibility section on the website that promotes accessible programs and services to patrons/visitors.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b068",
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "subQuestions": [],
+    "no": 56,
+    "section": "6145c8653b270007e71da475",
+    "question": "Does your organization sell event tickets online through your website or through an outside provider?.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b069",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 2,
+        "question": "Is this already in practice ?",
+        "qtype": "radio",
+        "options": ["yes", "no"]
+      },
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "no": 7,
+        "question": "Person/title responsible for Implementation : ",
+        "options": [],
+        "qtype": "text"
+      },
+      {
+        "no": 8,
+        "options": [],
+        "question": "Estimated Cost",
+        "qtype": "text"
+      },
+      {
+        "question": "If not applicable, please explain:",
+        "no": 9,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 57,
+    "section": "6145c8653b270007e71da475",
+    "question": "Organization offers seating diagram or chart showing location of accessible seating for ticket sales on its website or through an online ticketing service.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b06a",
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "subQuestions": [],
+    "no": 58,
+    "section": "6145c8653b270007e71da475",
+    "question": "Organization offers tickets in all price ranges to people with disabilities and up to three companions requesting accessible seating.",
+    "__v": 0
+  },
+  {
+    "_id": {
+        "_id": "6145ceebf7aeef0f7c54b06b"
+    },
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [{
+        "no": 1,
+        "question": "Please provide details below:",
+        "qtype": "multi-text",
+        "options": []
+    }, {
+        "no": 2,
+        "question": "Please provide link here:",
+        "qtype": "text",
+        "options": []
+    }],
+    "no": 59,
+    "section": {
+        "_id": "6145c8653b270007e71da475"
+    },
+    "question": "If yes, please explain the details here. If not, please explain your plan and timeline to implement this ticketing policy.",
+    "__v": 0
+},
+  {
+    "_id": "6145ceebf7aeef0f7c54b06c",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 2,
+        "question": "Is this already in practice ?",
+        "qtype": "radio",
+        "options": ["yes", "no"]
+      },
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "no": 7,
+        "question": "Person/title responsible for Implementation : ",
+        "options": [],
+        "qtype": "text"
+      },
+      {
+        "no": 8,
+        "options": [],
+        "question": "Estimated Cost",
+        "qtype": "text"
+      },
+      {
+        "question": "If not applicable, please explain:",
+        "no": 9,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 60,
+    "section": "6145c8653b270007e71da475",
+    "question": "Organization offers discounted ticket prices to individuals with disabilities and their companion.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b06d",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 2,
+        "question": "Is this already in practice ?",
+        "qtype": "radio",
+        "options": ["yes", "no"]
+      },
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "no": 7,
+        "question": "Person/title responsible for Implementation : ",
+        "options": [],
+        "qtype": "text"
+      },
+      {
+        "no": 8,
+        "options": [],
+        "question": "Estimated Cost",
+        "qtype": "text"
+      },
+      {
+        "question": "If not applicable, please explain:",
+        "no": 9,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 61,
+    "section": "6145c8653b270007e71da476",
+    "question": "Marketing materials are available or offered in alternate formats (e.g. large print/Braille/electronic media).",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b06e",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 2,
+        "question": "Is this already in practice ?",
+        "qtype": "radio",
+        "options": ["yes", "no"]
+      },
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "no": 7,
+        "question": "Person/title responsible for Implementation : ",
+        "options": [],
+        "qtype": "text"
+      },
+      {
+        "no": 8,
+        "options": [],
+        "question": "Estimated Cost",
+        "qtype": "text"
+      },
+      {
+        "question": "If not applicable, please explain:",
+        "no": 9,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 62,
+    "section": "6145c8653b270007e71da476",
+    "question": "Social media posts are accessible (e.g. Alt text, captioned videos, image descriptions).",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b06f",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 2,
+        "question": "Is this already in practice ?",
+        "qtype": "radio",
+        "options": ["yes", "no"]
+      },
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "no": 7,
+        "question": "Person/title responsible for Implementation : ",
+        "options": [],
+        "qtype": "text"
+      },
+      {
+        "no": 8,
+        "options": [],
+        "question": "Estimated Cost",
+        "qtype": "text"
+      },
+      {
+        "question": "If not applicable, please explain:",
+        "no": 9,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 63,
+    "section": "6145c8653b270007e71da476",
+    "question": "Brochures and other marketing materials list appropriate international access symbols and a statement regarding accessibility policies.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b070",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 2,
+        "question": "Is this already in practice ?",
+        "qtype": "radio",
+        "options": ["yes", "no"]
+      },
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "no": 7,
+        "question": "Person/title responsible for Implementation : ",
+        "options": [],
+        "qtype": "text"
+      },
+      {
+        "no": 8,
+        "options": [],
+        "question": "Estimated Cost",
+        "qtype": "text"
+      },
+      {
+        "question": "If not applicable, please explain:",
+        "no": 9,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 64,
+    "section": "6145c8653b270007e71da476",
+    "question": "Organization has reasonable advance notification policy for patrons interested in utilizing its programs and services (e.g. sign interpretation, large print programs, etc).",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b071",
+    "options": [],
+    "qtype": "multi-text",
+    "subQuestions": [],
+    "no": 65,
+    "section": "6145c8653b270007e71da476",
+    "question": "If organization has an advanced notification policy, please provide here.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b072",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 2,
+        "question": "Is this already in practice ?",
+        "qtype": "radio",
+        "options": ["yes", "no"]
+      },
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "no": 7,
+        "question": "Person/title responsible for Implementation : ",
+        "options": [],
+        "qtype": "text"
+      },
+      {
+        "no": 8,
+        "options": [],
+        "question": "Estimated Cost",
+        "qtype": "text"
+      },
+      {
+        "question": "If not applicable, please explain:",
+        "no": 9,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 66,
+    "section": "6145c8653b270007e71da476",
+    "question": "Organization utilizes its ADA advisory board or similar representation to reach patrons with disabilities.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b073",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 2,
+        "question": "Is this already in practice ?",
+        "qtype": "radio",
+        "options": ["yes", "no"]
+      },
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "no": 7,
+        "question": "Person/title responsible for Implementation : ",
+        "options": [],
+        "qtype": "text"
+      },
+      {
+        "no": 8,
+        "options": [],
+        "question": "Estimated Cost",
+        "qtype": "text"
+      },
+      {
+        "question": "If not applicable, please explain:",
+        "no": 9,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 67,
+    "section": "6145c8653b270007e71da476",
+    "question": "Organization has developed or is planning to develop a targeted marketing approach to reach out to patrons with disabilities.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b074",
+    "options": ["Yes", "No"],
+    "qtype": "radio",
+    "subQuestions": [],
+    "no": 68,
+    "section": "6145c8653b270007e71da476",
+    "question": "Does your organization tour or use other facilities than those you own?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b076",
+    "options": [],
+    "qtype": "multi-text",
+    "subQuestions": [],
+    "no": 70,
+    "section": "6145c8653b270007e71da477",
+    "question": "Please describe the accessible route from public transportation to the facility.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b077",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 3,
+        "question": "If yes, please provide link here:",
+        "qtype": "text",
+        "options": []
+      },
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "question": "If not applicable, please explain:",
+        "no": 9,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 71,
+    "section": "6145c8653b270007e71da477",
+    "question": "If there is not an accessible route, please explain your goals for working with local/community officials to establish one in each of the following fiscal years.  ",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b078",
+    "options": [],
+    "qtype": "multi-text",
+    "subQuestions": [],
+    "no": 72,
+    "section": "6145c8653b270007e71da477",
+    "question": "Please describe available ADA compliant parking.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b079",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "question": "If not applicable, please explain:",
+        "no": 9,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 73,
+    "section": "6145c8653b270007e71da477",
+    "question": "If you do not offer this accommodation, please explain your goals for offering the accommodation in each of the following fiscal years.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b07a",
+    "options": [],
+    "qtype": "multi-text",
+    "subQuestions": [],
+    "no": 74,
+    "section": "6145c8653b270007e71da477",
+    "question": "Please describe the accessible route from parking to primary accessible entrance.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b07b",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "question": "If not applicable, please explain:",
+        "no": 9,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 75,
+    "section": "6145c8653b270007e71da477",
+    "question": "If there is not an accessible route, please explain your goals for working with local/community officials to establish one in each of the following fiscal years.  ",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b07c",
+    "options": [],
+    "qtype": "multi-text",
+    "subQuestions": [],
+    "no": 76,
+    "section": "6145c8653b270007e71da477",
+    "question": "Please describe ADA compliant doors to entrance, bathrooms, assembly areas, gallery/display areas.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b07d",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+
+      {
+        "question": "If not applicable, please explain:",
+        "no": 9,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 77,
+    "section": "6145c8653b270007e71da477",
+    "question": "If you do not offer this accommodation, please explain your goals for offering the accommodation in each of the following fiscal years.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b07e",
+    "options": [],
+    "qtype": "multi-text",
+    "subQuestions": [],
+    "no": 78,
+    "section": "6145c8653b270007e71da477",
+    "question": "If your facility has multiple levels, please describe the availability of an elevator or interior ramps at level or floor changes.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b07f",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "question": "If not applicable, please explain:",
+        "no": 9,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 79,
+    "section": "6145c8653b270007e71da477",
+    "question": "If you do not offer this accommodation, please explain your goals for offering the accommodation in each of the following fiscal years.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b080",
+    "options": [],
+    "qtype": "multi-text",
+    "subQuestions": [],
+    "no": 80,
+    "section": "6145c8653b270007e71da477",
+    "question": "Restrooms (or gender-inclusive bathroom) used by the public are ADA compliant.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b081",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "question": "If not applicable, please explain:",
+        "no": 9,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 81,
+    "section": "6145c8653b270007e71da477",
+    "question": "If you do not offer this accommodation, please explain your goals for offering the accommodation in each of the following fiscal years.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b082",
+    "options": [],
+    "qtype": "multi-text",
+    "subQuestions": [],
+    "no": 82,
+    "section": "6145c8653b270007e71da477",
+    "question": "Seating areas of facility have the correct percentage of wheelchair locations on each level as required by the law. Please include percentage of seats that are wheelchair accessible in your description.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b083",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "question": "If not applicable, please explain:",
+        "no": 9,
+        "qtype": "multi-text",
+        "options": []
+      }
+    ],
+    "no": 83,
+    "section": "6145c8653b270007e71da477",
+    "question": "If you do not offer this accommodation, please explain your goals for offering the accommodation in each of the following fiscal years.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b084",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 1,
+        "options": [],
+        "question": "Please provide your answer below",
+        "qtype": "multi-text"
+    },
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      }
+    ],
+    "no": 84,
+    "section": "6145c8653b270007e71da477",
+    "question": "Please describe ADA compliant signage in all facilities your maintain (performance, exhibit, classroom, office and rehearsal space), including Braille, font size, contrast, mounting, and height.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b085",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "no": 7,
+        "options": [],
+        "question": "If not applicable, please explain:",
+        "qtype": "multi-text"
+      }
+    ],
+    "no": 85,
+    "section": "6145c8653b270007e71da477",
+    "question": "If you do not offer this accommodation, please explain your goals for offering the accommodation in each of the following fiscal years.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b086",
+    "options": [],
+    "qtype": "multi-text",
+    "subQuestions": [],
+    "no": 86,
+    "section": "6145c8653b270007e71da477",
+    "question": "Please describe ADA compliant box office window or information desk.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b087",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "no": 7,
+        "options": [],
+        "question": "If not applicable, please explain:",
+        "qtype": "multi-text"
+      }
+    ],
+    "no": 87,
+    "section": "6145c8653b270007e71da477",
+    "question": "If you do not offer this accommodation, please explain your goals for offering the accommodation in each of the following fiscal years.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b088",
+    "options": [],
+    "qtype": "multi-text",
+    "subQuestions": [],
+    "no": 88,
+    "section": "6145c8653b270007e71da477",
+    "question": "Please describe ADA compliant concession stand or gift shop.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b089",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "no": 7,
+        "options": [],
+        "question": "If not applicable, please explain:",
+        "qtype": "multi-text"
+      }
+    ],
+    "no": 89,
+    "section": "6145c8653b270007e71da477",
+    "question": "If you do not offer this accommodation, please explain your goals for offering the accommodation in each of the following fiscal years.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b08a",
+    "options": [],
+    "qtype": "multi-text",
+    "subQuestions": [],
+    "no": 90,
+    "section": "6145c8653b270007e71da477",
+    "question": "Please describe ADA compliant performance/dressing room/artist space/classroom.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b08b",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 4,
+        "options": [],
+        "question": "Goals For FY22",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Goals For FY23",
+        "qtype": "text"
+      },
+      {
+        "no": 6,
+        "options": [],
+        "question": "Goals For FY24",
+        "qtype": "text"
+      },
+      {
+        "no": 7,
+        "options": [],
+        "question": "If not applicable, please explain:",
+        "qtype": "multi-text"
+      }
+    ],
+    "no": 91,
+    "section": "6145c8653b270007e71da477",
+    "question": "If you do not offer this accommodation, please explain your goals for offering the accommodation in each of the following fiscal years.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b08c",
+    "options": [],
+    "qtype": "new-test",
+    "subQuestions": [
+      {
+        "no": 3,
+        "options": [],
+        "question": "Name:",
+        "qtype": "text"
+      },
+      {
+        "no": 4,
+        "options": [],
+        "question": "Title:",
+        "qtype": "text"
+      },
+      {
+        "no": 5,
+        "options": [],
+        "question": "Email Address:",
+        "qtype": "text"
+      }
+    ],
+    "no": 92,
+    "section": "6145c8653b270007e71da477",
+    "question": "Who in your organization is responsible for facility access oversight?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b08d",
+    "options": ["Yes", "No"],
+    "qtype": "radio-multi",
+    "subQuestions": [
+      {
+        "question": "Please offer further detail here:",
+        "options": [],
+        "qtype": "multi-text",
+        "no": 2
+      }
+    ],
+    "no": 93,
+    "section": "6145c8653b270007e71da477",
+    "question": "Has your organization budgeted for access capital needs?",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b08e",
+    "options": [],
+    "qtype": "file",
+    "subQuestions": [],
+    "no": 94,
+    "section": "6145c8653b270007e71da477",
+    "question": "OPTIONAL: To help the Cultural Access Network Project establish an ongoing library of resources, we would like to collect photos and/or marketing materials related to your access programming.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b08f",
+    "options": [],
+    "qtype": "file",
+    "subQuestions": [],
+    "no": 95,
+    "section": "6145c8653b270007e71da477",
+    "question": "Upload additional photo here.",
+    "__v": 0
+  },
+  {
+    "_id": "6145ceebf7aeef0f7c54b090",
+    "options": [],
+    "qtype": "file",
+    "subQuestions": [],
+    "no": 96,
+    "section": "6145c8653b270007e71da477",
+    "question": "Upload additional photo here.",
+    "__v": 0
+  }
+]

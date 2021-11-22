@@ -1,0 +1,33 @@
+<label for="">
+  <% for(let m=0; m<selectedSection.questions[j].subQuestions.length; m++) { %>
+    <div class="row">
+      <div class="col-md-4 mb-2">
+        <label for="">
+          <%= selectedSection.questions[j].subQuestions[m].question %>
+        </label>
+      </div>
+      <div class="col-md-6 mb-2">
+        <input
+          value="<%= getTheAnswer(selectedSection.questions[j].ans, selectedSection.questions[j].subQuestions[m].no) %>"
+          onblur="onInputBlur(this)" data-question-id="<%= selectedSection.questions[j]._id %>"
+          name="<%= selectedSection.questions[j]._id %>"
+          data-text="<%=selectedSection.questions[j].subQuestions[m].question %>"
+          data-no="<%= selectedSection.questions[j].subQuestions[m].no %>" type="text" class="form-control">
+      </div>
+    </div>
+    <% } %>
+
+      <div class="row">
+        <div class="col-md-12">
+          <% let ans=selectedSection.questions[j].ans %>
+            <% for(let z=0; z<ans.length; z++) { %>
+              <% if(isSecondary(ans[z])) {%>
+                <input value="<%= ans[z].value %>" onblur="handleMultiObjQuestion(this)"
+                  data-question-id="<%= selectedSection.questions[j]._id %>"
+                  name="<%= selectedSection.questions[j]._id %>" type="text" class="form-control text-danger">
+
+                <% } %>
+                  <% } %>
+        </div>
+      </div>
+</label>

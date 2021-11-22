@@ -1,0 +1,42 @@
+<div class="topbar-menu">
+  <div class="container-fluid">
+    <div id="navigation pt-2 pb-2">
+      <!-- Navigation Menu-->
+      <ul class="navigation-menu d-flex mt-4 justify-content-center">
+
+        <!-- <li class="has-submenu">
+                    <a href="/dashboard"><i class=" mdi mdi-home"></i>Home</a>
+                </li> -->
+        <!-- <li class="has-submenu">
+                    <a href="/email"><i class=" mdi mdi-message"></i>Send Email</a>
+                </li> -->
+        <li class="has-submenu pt-2 pb-2">
+          <% if(className == 'dashboard') { %>
+          <a href="/admin/dashboard" class="active"><i class=" mdi mdi-message"></i>Submissions</a>
+          <% } else { %>
+          <a href="/admin/dashboard" class=""><i class=" mdi mdi-message"></i>Submissions</a>
+          <% } %>
+        </li>
+        <li class="has-submenu pt-2 pb-2">
+          <% if(className == 'settings') { %>
+          <a href="/admin/settings" class="active"><i class=" mdi mdi-message"></i>Settings</a>
+          <% } else { %>
+          <a href="/admin/settings" class=""><i class=" mdi mdi-message"></i>Settings</a>
+          <% } %>
+        </li>
+        <li class="has-submenu pt-2 pb-2">
+          <% if(className == 'organizations') {%>
+          <a href="/admin/organizations" class="active"><i class=" mdi mdi-upload"></i>Organizations</a>
+          <% } else { %>
+          <a href="/admin/organizations" class=""><i class=" mdi mdi-upload"></i>Organizations</a>
+          <% } %>
+        </li>
+      </ul>
+      <!-- End navigation menu -->
+
+      <div class="clearfix"></div>
+    </div>
+    <!-- end #navigation -->
+  </div>
+  <!-- end container -->
+</div>

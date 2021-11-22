@@ -1,0 +1,213 @@
+<body class="center-menu new-ui">
+
+  <% include ../partials/navbar-admin %>
+
+
+  <!-- ============================================================== -->
+  <!-- Start Page Content here -->
+  <!-- ============================================================== -->
+
+  <div class="wrapper" style="padding-top: 40px;">
+
+    <div class="container-fluid">
+      <% include ../partials/navbarTwo %>
+
+      <div class="row">
+        <!--end col-->
+        <!-- end row -->
+        <div class="col-xl-12 col-12">
+          <div class="d-flex flex-row-reverse">
+            <div class="d-flex">
+              <div class="form-group mt-auto mr-2">
+                <label for="" style="vertical-align: middle;">Filter By Year</label>
+              </div>
+              <div class="form-group mr-2">
+                <select id="yearID" class="form-control" onchange="updateFilter(this.value)" type="date" id="filterDate">
+                  <option value="null">-- select year --</option>
+                  <% for(let i = 2010; i<=(new Date()).getFullYear(); i++) { %>
+
+                  <option value="<%= i %>"> <%= i %> </option>
+                  <% } %>
+                </select>
+              </div>
+              <div class="form-group">
+                <a id="filterBtn" href="/admin/dashboard?year=null" class="btn btn-custom-color">Filter</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-12">
+          <div class="card-box card card-body card-login">
+
+            <div class="table d-none d-sm-block">
+              <table class="table table-hover mb-0-xl">
+                <thead>
+                  <th>Organization</th>
+                  <th>Submission Date</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </thead>
+                <% if(data.length> 0) { %>
+
+                <% data.forEach((doc, i)=> {%>
+                <tbody>
+                  <tr>
+                    <td>
+                      <%= doc.name %>
+                    </td>
+                    <td>
+                      <%= doc.submission.length> 0 ?
+                          doc.submission[0].submissionDate.toLocaleString().split(",")[0] : '--'
+                      %>
+                    </td>
+                    <td>
+                      <div class="dropdown">
+
+                        <button id="btn-<%= doc.submission[0]._id %>" style="width: 160px;" class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" id="dropdownBtn">
+                          <%if(new Date(doc.submission[0].subplan.dueDate) >= new Date()) { %>
+                          <span><%= {"inprogress": "In Progress", "completed": "Completed" }[doc.submission[0].status.toLowerCase()] %></span>
+                          <% } else if(new Date(doc.submission[0].subplan.dueDate) < new Date() && new Date() <= new Date(doc.submission[0].subplan.reSubmissionDate)) { %>
+
+                          <% if(!['needimprovement', 'approved', 'rejected'].includes(doc.submission[0].status.toLowerCase())) { %>
+                          <span>Submitted</span>
+                          <% } else { %>
+                          <span><%= {"needimprovement": "Need Improvement", "approved": "Approved", "rejected": "Rejected" }[doc.submission[0].status.toLowerCase()] %></span>
+                          <% } %>
+
+                          <% } else if(new Date() > new Date(doc.submission[0].subplan.reSubmissionDate)) { %>
+                          <% if(!['approved', 'rejected'].includes(doc.submission[0].status.toLowerCase())) { %>
+                          <span>Submitted</span>
+                          <% } else { %>
+                          <span><%= {"approved": "Approved", "rejected": "Rejected" }[doc.submission[0].status.toLowerCase()] %></span>
+                          <%}%>
+                          <% } %>
+
+                        </button>
+                        <% if(doc.submission.length> 0) { %>
+                        <ul class="dropdown-menu">
+                          <li class="dropdown-item"><a onclick="updateStatus('<%= doc._id %>', '<%= doc.submission[0]._id %>' ,'needImprovement')" href="#">Need Improvement</a></li>
+                          <li class="dropdown-item"><a onclick="updateStatus('<%= doc._id %>', '<%= doc.submission[0]._id %>','approved')" href="#">Approved</a></li>
+                          <li class="dropdown-item"><a onclick="updateStatus('<%= doc._id %>', '<%= doc.submission[0]._id %>','rejected')" href="#">Rejected</a>
+                          </li>
+                        </ul>
+                        <% } %>
+                      </div>
+                    </td>
+                    <td>
+                      <% if(doc.submission.length> 0) { %>
+                      <a href="/admin/view/submissions/<%= doc.submission[0].subplan._id %>/<%= doc._id %>" class="title-text">View >></a>
+                      <% } else { %>
+                      --
+                      <% } %>
+                    </td>
+                  </tr>
+                </tbody>
+                <% }) %>
+                <% } else { %>
+                <tbody>
+                  <tr>
+                    <td colspan="4">
+                      <p class="text-center p-4"> <strong>
+                          No Submissions Available!
+                        </strong> </p>
+                    </td>
+                  </tr>
+                </tbody>
+                <% } %>
+              </table>
+            </div> <!-- end table-->
+
+          </div>
+
+        </div><!-- end col -->
+      </div>
+      <!-- end row -->
+
+    </div>
+    <!-- end row -->
+
+  </div> <!-- end container -->
+  </div>
+  <!-- end wrapper -->
+
+  <!-- Vendor js -->
+  <script src="/js/vendor.min.js"></script>
+
+  <!-- knob plugin -->
+  <script src="/libs/jquery-knob/jquery.knob.min.js"></script>
+
+  <!-- Sweet Alerts js -->
+  <script src="/libs/sweetalert2/sweetalert2.min.js"></script>
+
+  <!-- Sweet alert init js-->
+  <script src="/js/pages/sweet-alerts.init.js"></script>
+
+  <!-- Dashboard init js-->
+  <script src="/js/pages/dashboard.init.js"></script>
+
+  <!-- Chart JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+
+  <!-- App js-->
+  <script src="/js/app.min.js"></script>
+
+  <!-- Delete Alert -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      let val = window.location.search.split("?year=")[1]
+      console.log($('#yearID option[value="' + val + '"]'));
+      $('#yearID>option[value="' + val + '"]').attr('selected', true);
+      console.log(val);
+    });
+
+    function updateFilter(year) {
+      let btn = document.getElementById("filterBtn");
+      btn.href = "/admin/dashboard?year=" + year;
+    }
+    $('#btn-delete').on('click', function(e) {
+      e.preventDefault();
+      var form = $(this).parents('form');
+      Swal.fire({
+        title: 'Are you sure you want to delete?',
+        type: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Are you sure you want to delete?'
+
+      }).then((result) => {
+        if (result.value) {
+          Swal.fire(
+            'Submitted!',
+            'Your submission has been deleted!',
+            'success'
+          )
+
+        }
+      })
+    });
+
+    function updateStatus(user, sub, status) {
+      console.log(user, sub, status);
+      fetch("/admin/update/status/" + user + "/" + sub + '?status=' + status, {
+        method: 'PUT',
+        body: JSON.stringify({
+          status: status
+        })
+      }).then((res) => res.json()).then((data) => {
+        document.getElementById("btn-" + sub).innerText = {
+          "needImprovement": "Need Improvement",
+          "approved": "Approved",
+          "rejected": "Rejected"
+        } [status];
+
+      }).catch(Err => console.log(Err))
+    }
+  </script>
+
+  <!-- Scripts Used by All Pages-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+<body class="center-menu">
+
+<% include ./partials/navbar %>
+
+
+<!-- ============================================================== -->
+<!-- Start Page Content here -->
+<!-- ============================================================== -->
+
+<div class="wrapper">
+
+    <div class="container-fluid">
+        <div class="mt-3">
+            <% include ./partials/messages %>
+        </div>
+
+
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box">
+                    <h4 class="page-title"> Profile Overview</h4>
+                </div>
+            </div>
+        </div>
+        <!-- end page title -->
+        <form action="users/updateProfile" method="POST">
+            <div class="col-12">
+                <div class=" card mb-4">
+                    <div class="card-body">
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <input type="hidden" name="_id" id="_id" value="<%= user._id %>">
+                                <label for="name" class="col-form-label">First Name</label>
+                                <input type="text" class="form-control" id="name" name="name" value="<%= user.name %>">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="name" class="col-form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" name="lastName"
+                                    value="<%= user.lastName %>">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="name" class="col-form-label">Company</label>
+                                <input type="text" class="form-control" id="company" name="company"
+                                    value="<%= user.company %>">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                <label for="email" class="col-form-label">Email</label>
+                                <input type="text" class="form-control" id="email" name="email"
+                                    value="<%= user.email %>">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group float-left col-auto">
+                                <button type="submit" class=" mt-4 btn btn-primary waves-effect width-md waves-light"
+                                    id="btn-finish">
+                                    Update Profile
+                                </button>
+                            </div>
+                            <div class="form-group float-right col-md-2">
+                                <button type="button" onclick="location.href='/forgot'" class=" mt-4 btn btn-primary waves-effect width-md waves-light">
+                                    Change Password
+                                </button>
+                            </div> 
+                            
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </form>
+
+
+
+    </div> <!-- end container -->
+</div>
+<!-- end wrapper -->
+
+<!-- ============================================================== -->
+<!-- End Page content -->
+<!-- ============================================================== -->
+
+<!-- Footer Start -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="https://designedbyfs.com" target="_blank">
+                    <img id="footer-image-sm" width="auto" height="30" src="/assets/img/Official_Banner.png"></a>
+                    <a href="https://designedbyfs.com" target="_blank">
+                    <img id="footer-image-lg" width="auto" height="37.5" src="/assets/img/Official_Banner_Full.png"></a>
+                </div>
+                <div class="col-md-6">
+                    <div class="text-md-right footer-links d-none d-sm-block">
+                        <a href="https://www.gsff.org" target="_blank">GSFF Website</a>
+                        <a href="https://www.gsff.org/portal-terms" target="_blank">Terms</a>
+                        <a href="mailto:portal_support@gsff.org?subject=Support Request">Contact Support</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end Footer -->
+
+<!-- Vendor js -->
+<script src="/js/vendor.min.js"></script>
+
+<!-- knob plugin -->
+<script src="/libs/jquery-knob/jquery.knob.min.js"></script>
+
+<!-- Sweet Alerts js -->
+<script src="/libs/sweetalert2/sweetalert2.min.js"></script>
+
+<!-- Sweet alert init js-->
+<script src="/js/pages/sweet-alerts.init.js"></script>
+
+<!-- Dashboard init js-->
+<script src="/js/pages/dashboard.init.js"></script>
+
+<!-- Chart JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+
+<!-- App js-->
+<script src="/js/app.min.js"></script>
+
+<!--Donut Chart-->
+<script>
+    var missingFilms = 0;
+    var code = document.getElementById("code-id").value;
+    var lastChar = code[code.length - 1];
+    var integer = parseInt(lastChar, 10);
+    var numberSubmitted = document.getElementById('numberSubmitted').value;
+
+
+    var rows = document.getElementById('submissionTable').rows,
+        len = rows.length,
+        i,
+        cellNum = 2,
+        count = 0,
+        cell;
+
+    // for (i = 0; i < len; i++) {
+    //     cell = rows[i].cells[cellNum];
+    //     if (cell.innerHTML === 'Missing Film') {
+    //         count++;
+    //     } 
+    //     missingFilms = count;
+    // }
+
+    missingFilms = $('td:contains("Missing Film")').length / 2;
+
+
+    numberSubmitted = numberSubmitted - missingFilms;
+    var submissionsRemaining = integer - (numberSubmitted + missingFilms);
+
+
+
+
+
+
+
+    var ctx = document.getElementById("myChart").getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            datasets: [{
+                backgroundColor: [
+                    "#e5e5e5",
+                    "#00cc00",
+                    "#ff5b5b"
+                ],
+                data: [submissionsRemaining, numberSubmitted, missingFilms]
+            }]
+        },
+        options: {
+            responsive: true,
+            tooltips: {
+                enabled: false
+            }
+        }
+    });
+</script>
+
+<!-- Delete Alert -->
+<script type="text/javascript">
+    $('#btn-delete').on('click', function (e) {
+        e.preventDefault();
+        var form = $(this).parents('form');
+        Swal.fire({
+            title: 'Are you sure you want to delete?',
+            type: 'question',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Are you sure you want to delete?'
+
+        }).then((result) => {
+            if (result.value) {
+                Swal.fire(
+                    'Submitted!',
+                    'Your submission has been deleted!',
+                    'success'
+                )
+
+            }
+        })
+    });
+</script>
+
+<!-- Scripts Used by All Pages-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

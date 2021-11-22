@@ -1,0 +1,76 @@
+<label for="">
+
+  <!-- <input onchange="onInputBlur(this)" data-type="1" data-no="1" value="<%= getTheAnswer(selectedSection.questions[j].ans, 1) %>" data-question-id="<%= selectedSection.questions[j]._id %>" name="<%= selectedSection.questions[j]._id %>" class="form-control mb-3"> -->
+  <br>
+  <% let subquestions=selectedSection.questions[j].subQuestions %>
+    <% for(let n=0; n<subquestions.length; n++) { %>
+      <% if(subquestions[n].qtype=='text' ) { %>
+
+        <div class="row">
+          <div class="col-md-3">
+            <label class="mb-2">
+              <%= subquestions[n].question %>
+            </label>
+          </div>
+          <div class="col-md-5">
+            <input type="text" value="<%= getTheAnswer(selectedSection.questions[j].ans, subquestions[n].no) %>"
+              onblur="onInputBlur(this)" class="form-control mb-2" data-text="<%= subquestions[n].question %>"
+              name="<%= selectedSection.questions[j]._id %>" data-question-id="<%= selectedSection.questions[j]._id %>"
+              data-type="1" data-no="<%= subquestions[n].no %>">
+          </div>
+        </div>
+
+        <% } else if(subquestions[n].qtype=="radio" ) { %>
+
+          <div name="radio-<%= selectedSection.questions[j]._id %>">
+            <div class="row">
+              <div class="col-md-4">
+                <label>
+                  <%= subquestions[n].question %>
+                </label>
+              </div>
+              <div class="col-md-8">
+                <label><input value="yes" <%=isSelected(selectedSection.questions[j].ans, 'yes' , subquestions[n].no)
+                    ? 'checked' : '' %> onchange="onInputBlur(this)" data-type="1" data-text="<%=
+                    subquestions[n].question %>" data-no="<%= subquestions[n].no %>" data-question-id="<%=
+                        selectedSection.questions[j]._id %>"
+                        name="<%= selectedSection.questions[j]._id %>-<%= subquestions[n].no %>"
+                            type="radio"> Yes</label>
+                <label><input value="no" <%=isSelected(selectedSection.questions[j].ans, 'no' , subquestions[n].no)
+                    ? 'checked' : '' %> onchange="onInputBlur(this)" data-type="1" data-text="<%=
+                    subquestions[n].question %>" data-no="<%= subquestions[n].no %>" data-question-id="<%=
+                        selectedSection.questions[j]._id %>" name="<%= selectedSection.questions[j]._id %>-<%=
+                            subquestions[n].no %>" type="radio"> No</label>
+              </div>
+            </div>
+            <br>
+          </div>
+
+          <% } else if(subquestions[n].qtype=="multi-text" ) { %>
+
+            <div class="form-group">
+              <label for="">
+                <%= subquestions[n].question %>
+              </label>
+              <textarea onblur="onInputBlur(this)" class="form-control mb-2" data-text="<%= subquestions[n].question %>"
+                name="<%= selectedSection.questions[j]._id %>"
+                data-question-id="<%= selectedSection.questions[j]._id %>" data-type="1"
+                data-no="<%= subquestions[n].no %>"><%= getTheAnswer(selectedSection.questions[j].ans, subquestions[n].no) %></textarea>
+            </div>
+
+            <% } %>
+              <%}%>
+
+                <% for(let k=0; k<selectedSection.questions[j].ans.length; k++) { %>
+                  <% if(isSecondary(selectedSection.questions[j].ans[k])) {%>
+                    <div class="form-group">
+                      <input class="form-control w-3" style="color: red" onfocus="handleFocus(this)"
+                        onblur="onInputBlur(this)" value="<%= selectedSection.questions[j].ans[k].value %>" type="text"
+                        data-type="2" id="<%= selectedSection.questions[j]._id %>"
+                        data-question-id="<%= selectedSection.questions[j]._id %>"
+                        name="<%= selectedSection.questions[j]._id %>">
+                    </div>
+                    <% } %>
+                      <% } %>
+
+</label>

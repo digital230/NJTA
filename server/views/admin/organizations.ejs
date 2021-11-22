@@ -1,0 +1,155 @@
+<body class="center-menu new-ui">
+
+  <% include ../partials/navbar-admin %>
+
+
+  <!-- ============================================================== -->
+  <!-- Start Page Content here -->
+  <!-- ============================================================== -->
+
+  <div class="wrapper" style="padding-top: 40px;">
+
+    <div class="container-fluid">
+      <% include ../partials/navbarTwo %>
+      <div class="row">
+        <!--end col-->
+        <!-- end row -->
+        <div class="col-xl-12">
+          <div class="card card-body card-survey">
+
+            <div class="table d-none d-sm-block">
+              <table id="myTable" class="display" style="width: 100%;">
+
+                <thead>
+                  <th>Name</th>
+                  <th>Contact</th>
+                  <th>Organization ID</th>
+                  <th>Email</th>
+                </thead>
+
+                <tbody>
+                  <% data.forEach((doc, i)=> {%>
+                  <tr>
+                    <td data-search="<%= doc.name %>">
+                      <%= doc.name %>
+                    </td>
+                    <td>
+                      <%= doc.contact %>
+                    </td>
+                    <td>
+                      <%= doc.code %>
+                    </td>
+                    <td><%= doc.email %></td>
+                  </tr>
+                  <% }) %>
+                </tbody>
+              </table>
+            </div> <!-- end table-->
+
+          </div>
+
+        </div><!-- end col -->
+      </div>
+      <!-- end row -->
+
+    </div>
+    <!-- end row -->
+
+  </div> <!-- end container -->
+  </div>
+  <!-- end wrapper -->
+
+  <!-- Vendor js -->
+  <script src="/js/vendor.min.js"></script>
+
+  <!-- knob plugin -->
+  <script src="/libs/jquery-knob/jquery.knob.min.js"></script>
+
+  <!-- Sweet Alerts js -->
+  <script src="/libs/sweetalert2/sweetalert2.min.js"></script>
+
+  <!-- Sweet alert init js-->
+  <script src="/js/pages/sweet-alerts.init.js"></script>
+
+  <!-- Dashboard init js-->
+  <script src="/js/pages/dashboard.init.js"></script>
+
+  <!-- Chart JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+
+  <!-- App js-->
+  <script src="/js/app.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
+
+  <!-- Delete Alert -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+      //   $('#myTable').DataTable({
+      //     "processing": true,
+      //     "serveriSide": true,
+      //     "ajax": "/"
+      //   });
+    });
+
+    $('#myTable').dataTable();
+    // $('#myTable').dataTable({
+    //   "ajax": {
+    //     "url": "/admin/get/organizations",
+    //     "dataSrc": function(json) {
+    //       console.log("== response ==")
+    //       console.log(json);
+    //       console.log("== response ==")
+    //       let res = [];
+    //       for (let i = 0; i < json.data.length; i++) {
+    //         res[i] = [];
+    //         res[i].push(i);
+    //         res[i].push(json.data[i].name);
+    //         res[i].push(json.data[i].contact);
+    //         res[i].push(json.data[i].code);
+    //         res[i].push(json.data[i].email);
+    //       }
+    //       console.log(res);
+    //       return res; //json.data;
+    //     }
+    //   }
+    // });
+
+    function sendEmail(link) {
+      fetch(link).then(res => res.json()).then(data => {
+          alert(data.message);
+        })
+        .catch(err => alert(err.message));
+    }
+    $('#btn-delete').on('click', function(e) {
+      e.preventDefault();
+      var form = $(this).parents('form');
+      Swal.fire({
+        title: 'Are you sure you want to delete?',
+        type: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Are you sure you want to delete?'
+
+      }).then((result) => {
+        if (result.value) {
+          Swal.fire(
+            'Submitted!',
+            'Your submission has been deleted!',
+            'success'
+          )
+
+        }
+      })
+    });
+  </script>
+
+  <!-- Scripts Used by All Pages-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>

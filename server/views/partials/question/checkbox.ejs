@@ -1,0 +1,23 @@
+<label for="<%= selectedSection.questions[j].id %>"></label>
+<% for(let k=0; k<selectedSection.questions[j].options.length; k++) { %>
+<label>
+  <input id="checkbox" onchange="onInputBlur(this, 'checkbox', '<%= selectedSection.questions[j]._id %>', '<%= selectedSection._id %>')" <%=selectedSection.questions[j].ans !='undefined' &&
+      selectedSection.questions[j].ans.filter(ans => ans.value == selectedSection.questions[j].options[k]).length > 0 ? "checked" : "" %> type="checkbox" id="<%= selectedSection.questions[j]._id %>" name="<%= selectedSection._id +'~'+selectedSection.questions[j]._id %>" value="
+        <%= selectedSection.questions[j].options[k] %>"> <%= selectedSection.questions[j].options[k] %>
+  <% for(let z=0; z<selectedSection.questions[j].ans.length; z++) { 
+            if(selectedSection.questions[j].ans[z].type == 1 && selectedSection.questions[j].ans[z].value == selectedSection.questions[j].options[k]) {
+              selectedSection.questions[j].ans.splice(z, 1);
+              break;
+            }
+         } %>
+  <!-- <span style="display: none;"><%= selectedSection.questions[j].ans.indexOf(selectedSection.questions[j].options[k]) > -1 ? selectedSection.questions[j].ans.splice(selectedSection.questions[j].ans.indexOf(selectedSection.questions[j].options[k]), 1) : '' %></span> -->
+</label>
+<% } %>
+
+
+
+<% for(let k = 0; k<selectedSection.questions[j].ans.length; k++) { %>
+<div class="form-group">
+  <input class="form-control w-3" style="color: red;" onfocus="handleFocus(this)" onblur="onInputBlur(this, 'text', '<%=selectedSection.questions[j]._id %>', '<%= selectedSection._id %>')" value="<%= selectedSection.questions[j].ans[k].value %>" type="text" id="<%= selectedSection.questions[j]._id %>" name="<%= selectedSection._id + '~'+ selectedSection.questions[j]._id %>">
+</div>
+<% } %>
