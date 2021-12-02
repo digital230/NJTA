@@ -305,9 +305,9 @@ router.post("/submit/question/draft", ensureAuthenticated, async (req, res) => {
               submission.questionair.splice(i, 1);
             }
           }
-          // filteredQuestion.splice(0, 1);
+          filteredQuestion.splice(0, 1);
         } else {
-          // filteredQuestion[0].ans = ans;
+          filteredQuestion[0].ans = ans;
         }
       } else {
         if (emptyAnsLength == 0 || emptyAnsLength < ansLength) {
@@ -419,18 +419,19 @@ router.post("/submit/question/draft", ensureAuthenticated, async (req, res) => {
       //   submission.status = "inprogress";
       //   console.log("make it inprogress ...");
       // }
-      let saved;
-      try {
-        saved = await submission.save();
-      } catch (error) {
-        console.log("error: ", error);
-      }
+      let saved = await submission.save();
+      console.log("saved: ", saved.questionair);
       let allCompletionStatus = await isAllsStatusCompleted(
         req.user._id,
         plan,
         allSectionsLength
       );
 
+      console.log(
+        "allCompletionStatus: ",
+        allCompletionStatus,
+        allSectionsLength
+      );
       if (allCompletionStatus == allSectionsLength) {
         console.log("all completed");
         checkSubmissionStatusAndUpdate(req.user._id, plan, false);
