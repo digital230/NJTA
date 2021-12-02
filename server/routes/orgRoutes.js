@@ -274,16 +274,16 @@ router.post("/submit/question/draft", ensureAuthenticated, async (req, res) => {
       section: section,
       user: req.user._id,
     });
-    console.log("submission: ", submission.questionair.length);
+    // console.log("submission: ", submission.questionair);
 
-    for (let q of sectionQuestion.questions) {
-      console.log(q);
-      let a = submission.questionair.filter(
-        (w) => w.question == q._id || w.question.equals(q._id)
-      );
+    // for (let q of sectionQuestion.questions) {
+    //   console.log(q);
+    //   let a = submission.questionair.filter(
+    //     (w) => w.question == q._id || w.question.equals(q._id)
+    //   );
 
-      console.log("====>", a.length);
-    }
+    //   console.log("====>", a.length);
+    // }
 
     if (submission) {
       let filteredQuestion = submission.questionair.filter(
@@ -419,8 +419,9 @@ router.post("/submit/question/draft", ensureAuthenticated, async (req, res) => {
       //   submission.status = "inprogress";
       //   console.log("make it inprogress ...");
       // }
+      let saved;
       try {
-        let saved = await submission.save();
+        saved = await submission.save();
       } catch (error) {
         console.log("error: ", error);
       }
@@ -429,11 +430,6 @@ router.post("/submit/question/draft", ensureAuthenticated, async (req, res) => {
         plan,
         allSectionsLength
       );
-      // console.log(
-      //   "allCompletionStatus: ",
-      //   allCompletionStatus,
-      //   allSectionsLength
-      // );
 
       if (allCompletionStatus == allSectionsLength) {
         console.log("all completed");
